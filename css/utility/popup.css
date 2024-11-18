@@ -1,0 +1,9 @@
+#dark-theme .topbar_background {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#dark-theme .topbar_content {
+    background: black;
+    color: white;
+    border-color: aqua;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>The Void</title>
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <!-- <link rel="stylesheet" href="css/index.css" /> -->
+  <link rel="stylesheet" href="css/utility/topbar.css" />
+  <link rel="stylesheet" href="css/utility/main.css" />
+</head>
+<body id="dark-theme" class="main">
+  <div className='background'></div >
+  <div class="topbar">toto</div>
+  <div class="content_1"></div>
+  <!-- <div class="container"> -->
+    <div class="image image-left">
+      <img src="img/vide.webp" alt="Image 1">
+    </div>
+
+    <div class="tear">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <!-- Ligne déchirée irrégulière -->
+        <defs>
+          <radialGradient id="goldBlackRadial" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color: rgb(7, 11, 36); stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: black; stop-opacity: 1" />
+          </radialGradient>
+          <linearGradient id="goldBlackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color: gold; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: black; stop-opacity: 1" />
+          </linearGradient>
+        </defs>
+        <path d="M50,0 
+        Q40,10 60,20 
+        Q35,30 65,40 
+        Q45,50 55,60 
+        Q40,70 60,80 
+        Q45,90 55,100 
+        L0,100 
+        L0,0 
+        Z" fill="url(#goldBlackRadial)"/>
+      </svg>
+    </div>
+    <div class="image image-right">
+      <img src="img/chose.jpg" alt="Image 2">
+      <div class="tear"></div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,50 @@
+#dark-theme .gg-symbol {
+    background: #969696;
+}
+
+#dark-theme .Arrow {
+    background: #384750;
+}
+
+#dark-theme .Arrow:after {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #384750;
+}
+
+#dark-theme .WorkItem {
+    color: white;
+}
+
+#dark-theme .WorkItem-subtitle {
+    color: #708896;
+}
+
+#dark-theme .WorkItem-dot {
+    background: #ff6c6a;
+}
+
+#dark-theme .WorkItem-roll {
+    background: rgba(255, 0, 0, .5);
+}
+
+#dark-theme .WorkItem:hover .WorkItem-subtitle {
+    color: #fff
+}
+
+@media screen and (max-width:767px) {
+    #dark-theme .WorkItem:hover .WorkItem-subtitle {
+        color: #708896
+    }
+}
+
+@media (max-height:500px),
+screen and (max-width:767px) {
+    #dark-theme .Footer a:after {
+        background: #ff6c6a
+    }
+}
+
+#dark-theme .Menu .gg-symbol {
+    background: #fff
+}
