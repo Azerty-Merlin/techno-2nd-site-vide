@@ -248,7 +248,7 @@
 
 @media screen and (min-width: calc(30cm - 1px)) {
     #light-theme .topbar {
-        background-color: white;
+        background-color: rgb(208, 208, 208);
         border-bottom: 2px solid black;
     }
 
@@ -364,7 +364,7 @@
 
 @media screen and (max-width: 30cm) {
     #light-theme .topbar {
-        background-color: white;
+        background-color: rgb(208, 208, 208);
         border-bottom: 2px solid black;
     }
 

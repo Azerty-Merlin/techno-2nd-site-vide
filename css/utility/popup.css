@@ -8,6 +8,16 @@
     border-color: rgb(238, 0, 255);
 }
 
+#light-theme .popup_background {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#light-theme .popup_content {
+    background: black;
+    color: white;
+    border-color: rgb(238, 0, 255);
+}
+
 .popup_background {
     position: fixed;
     top: 0;

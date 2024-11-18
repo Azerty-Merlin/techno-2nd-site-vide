@@ -114,9 +114,7 @@
     border-color: #3d5af1 transparent transparent transparent;
 }
 
-#dark-theme .content_1,
-#dark-theme .content_2,
-#dark-theme .content_3,
+#dark-theme .content,
 #dark-theme p,
 #dark-theme .color {
     color: white !important;
@@ -138,9 +136,7 @@
     border-color: #3d5af1 transparent transparent transparent;
 }
 
-#light-theme .content_1,
-#light-theme .content_2,
-#light-theme .content_3,
+#light-theme .content,
 #light-theme p,
 #light-theme .color {
     color: black !important;
@@ -148,5 +144,4 @@
 
 #light-theme .background-color {
     background: rgb(208, 208, 208) !important;
-    ;
 }
