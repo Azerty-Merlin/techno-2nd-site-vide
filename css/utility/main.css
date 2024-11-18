@@ -1,19 +1,4 @@
 .background {
-    /* background: linear-gradient(#141e30, #243b55); */
-    background-color: black;
-}
-
-
-.content,
-.color {
-    color: white;
-}
-
-.background-color {
-    background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35) 100%) !important;
-}
-
-.background {
     top: 0;
     left: 0;
     margin: 0;
@@ -27,7 +12,7 @@
     z-index: -1,
 }
 
-.main {
+#main {
     z-index: 0;
     top: 0;
     left: 0;
@@ -37,6 +22,131 @@
     font-family: sans-serif;
 }
 
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+.img-loader {
+    max-height: 4cm;
+    position: absolute;
+    max-width: 4cm;
+    animation: up-anim 1.5s linear forwards;
+}
+
+.img-loader-after {
+
+    filter: brightness(1.1);
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    position: relative;
+    top: 3cm;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite, opacity 3s linear forwards;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes up-anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2cm);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.svg-icon {
+    fill: currentColor;
+}
+
 .flex {
     display: flex;
+}
+
+.MuiPaper-root .black p {
+    color: black !important
+}
+
+#dark-theme .background {
+    background: linear-gradient(#141e30, #243b55);
+}
+
+#dark-theme .loader-container {
+    background: rgba(0, 0, 0, 1);
+}
+
+#dark-theme .spinner {
+    border-color: #3d5af1 transparent transparent transparent;
+}
+
+#dark-theme .content_1,
+#dark-theme .content_2,
+#dark-theme .content_3,
+#dark-theme p,
+#dark-theme .color {
+    color: white !important;
+}
+
+#dark-theme .background-color {
+    background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35) 100%) !important;
+}
+
+#light-theme .background {
+    background: white;
+}
+
+#light-theme .loader-container {
+    background: white;
+}
+
+#light-theme .spinner {
+    border-color: #3d5af1 transparent transparent transparent;
+}
+
+#light-theme .content_1,
+#light-theme .content_2,
+#light-theme .content_3,
+#light-theme p,
+#light-theme .color {
+    color: black !important;
+}
+
+#light-theme .background-color {
+    background: rgb(208, 208, 208) !important;
+    ;
 }

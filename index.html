@@ -4,43 +4,221 @@
 <head>
   <meta charset="utf-8" />
   <title>The Void</title>
+  <link rel="icon" href="./img/black-hole.png" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <!-- <link rel="stylesheet" href="css/index.css" /> -->
   <link rel="stylesheet" href="css/utility/topbar.css" />
   <link rel="stylesheet" href="css/utility/main.css" />
+  <link rel="stylesheet" href="css/page/title.css" />
+  <link rel="stylesheet" href="css/utility/popup.css" />
 </head>
 
-<body id="dark-theme" class="main color">
-  <div class='background'></div>
-  <div class="topbar">
-    <div class="topbar_title">Bienvenue dans le Void</div>
+<!-- popup vide -->
+<div class="popup_background popup_vide_background"></div>
+<div class="popup_content popup_vide_content">
+  <img class="popup_background_img" src="./img/vide.webp">
+  <div class="popup_crose" onclick="hide_popup('popup_vide')">
+    <svg style="fill: currentcolor;">
+      <g id="Navbar-icon-close">
+        <path
+          d="M47.949,50.625c-0.64,0-1.28-0.244-1.768-0.732L14.635,18.346c-0.977-0.976-0.977-2.559,0-3.535    c0.976-0.977,2.56-0.977,3.535,0l31.546,31.547c0.977,0.976,0.977,2.559,0,3.535C49.229,50.381,48.589,50.625,47.949,50.625z">
+        </path>
+        <path
+          d="M16.051,50.273c-0.64,0-1.28-0.244-1.768-0.732c-0.977-0.976-0.977-2.559,0-3.535l31.898-31.898    c0.976-0.977,2.56-0.977,3.535,0c0.977,0.976,0.977,2.559,0,3.535L17.818,49.541C17.331,50.029,16.69,50.273,16.051,50.273z">
+        </path>
+      </g>
+    </svg>
   </div>
-  <div class="content">
-    <div class="flex">
+  <h1 class="popup_title">Vide</h1>
+</div>
+<!-- fin du vide -->
+
+<body id="light-theme" class="color">
+  <div id="main">
+    <div class='background'></div>
+    <div class="topbar">
+      <a href="#">
+        <div class="topbar_title">
+          <img src="./img/black-hole.png" class="topbar_title_img">
+          Void
+        </div>
+      </a>
+      <div class="topbar_item">Project </div>
+      <div class="topbar_item">Page </div>
+      <div class="topbar_item" style="position: absolute; right: 0; padding: 0;">
+        <button class="settings-button">
+          <svg class="settings-icon">
+            <path
+              d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- title -->
+      <div class="Section Home" style="margin-top: 2cm">
+        <div class="Home-content">
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--3" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
+          </div>
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+          </div>
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
+            </div>
+          </div>
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--3" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%); opacity: 1">
+            </div>
+          </div>
+          <div class="gg"></div>
+          <div class="gg gg--indent">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
+            </div>
+          </div>
+          <div class="Title" style="opacity: 1, ">
+            <div class="Title" data-component="Title">
+              <div class="container">
+                <h1 class="title1" id="title">The Void</h1>
+                <h2 class="subtitle">
+                  Contempler ce vide.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%); opacity: 1">
+            </div>
+            <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
+          </div>
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--4 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%), opacity: 1">
+            </div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--9 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%), opacity: 1">
+            </div>
+          </div>
+          <div class="gg"></div>
+          <div class="gg">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%), opacity: 1">
+            </div>
+          </div>
+          <div class="gg  gg-last">
+            <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+            <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
+            <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
+              style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%); opacity: 1, ">
+            </div>
+          </div>
+          <div class="Arrow" data-ref="arrow" style="transform: translate(0px); opacity: 1;"></div>
+        </div>
+      </div>
+      <!-- fin du title -->
+
+      <!-- liens -->
+      <div class="Section Work" style="opacity: 1; transform: translate(0px);">
+        <div class="Work-content">
+          <div>
+            <h3>
+              <span class="gg-symbol--gradient"
+                style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%);"></span>
+              Quesque vous ne voulez pas voir ?
+            </h3>
+            <div class="Objective-list">
+              <li>
+                <a class="WorkItem" href="#" onclick="show_popup('popup_vide')">
+                  <div class="WorkItem-content">
+                    <span class="WorkItem-title">Du vide ?</span>
+                    <span class="WorkItem-dot"></span>
+                    <span class="WorkItem-subtitle">Rien !</span>
+                  </div>
+                  <div class="WorkItem-roll gg-symbol--gradient"
+                    style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></div>
+                </a>
+              </li>
+              <li>
+                <a class="WorkItem" href="#">
+                  <div class="WorkItem-content">
+                    <span class="WorkItem-title">Quelque chose ?</span>
+                    <span class="WorkItem-dot"></span>
+                    <span class="WorkItem-subtitle">Des trucs !</span>
+                  </div>
+                  <div class="WorkItem-roll gg-symbol--gradient"
+                    style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></div>
+                </a>
+              </li>
+            </div>
+          </div>
+          <div class="Arrow" data-ref="arrow" style="transform: translate(0px); opacity: 1;"></div>
+        </div>
+      </div>
+      <!-- din des liens -->
+
+      <div class="flex">
         <img src="img/vide.webp" alt="Image 1" class="content_item">
         <img src="img/chose.jpg" alt="Image 2" class="content_item">
-    </div>
-    <a href="./page/main_vide.html" onclick="alert('toto')">Vide</a>
-    
-    <!-- <div class="container"> -->
-    <div class="image image-left">
+      </div>
+      <a href="./page/main_vide.html" onclick="alert('toto')">Vide</a>
 
-    </div>
+      <!-- <div class="container"> -->
+      <div class="image image-left">
 
-    <div class="tear">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <!-- Ligne déchirée irrégulière -->
-        <defs>
-          <radialGradient id="goldBlackRadial" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" style="stop-color: rgb(7, 11, 36); stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: black; stop-opacity: 1" />
-          </radialGradient>
-          <linearGradient id="goldBlackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color: gold; stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: black; stop-opacity: 1" />
-          </linearGradient>
-        </defs>
-        <path d="M50,0 
+      </div>
+
+      <div class="tear">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <!-- Ligne déchirée irrégulière -->
+          <defs>
+            <radialGradient id="goldBlackRadial" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" style="stop-color: rgb(7, 11, 36); stop-opacity: 1" />
+              <stop offset="100%" style="stop-color: black; stop-opacity: 1" />
+            </radialGradient>
+            <linearGradient id="goldBlackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color: gold; stop-opacity: 1" />
+              <stop offset="100%" style="stop-color: black; stop-opacity: 1" />
+            </linearGradient>
+          </defs>
+          <path d="M50,0 
         Q40,10 60,20 
         Q35,30 65,40 
         Q45,50 55,60 
@@ -49,12 +227,91 @@
         L0,100 
         L0,0 
         Z" fill="url(#goldBlackRadial)" />
-      </svg>
-    </div>
-    <div class="image image-right">
-      <img src="img/chose.jpg" alt="Image 2">
-      <div class="tear"></div>
+        </svg>
+      </div>
+      <div class="image image-right">
+        <img src="img/chose.jpg" alt="Image 2">
+        <div class="tear"></div>
+      </div>
     </div>
   </div>
   </div>
 </body>
+
+<script>
+  const main = document.getElementById('main');
+  const title = document.getElementById('title');
+  title.style.backgroundPosition = "50% 50%";
+
+  // Initial positions for the background
+  let traX = 0;
+  let traY = 90;
+
+  main.addEventListener('mousemove', (event) => {
+    const mouseX = event.pageX;
+    const mouseY = event.pageY;
+
+    // Calculate new positions
+    traX = ((4 * mouseX) / 570) + 0;
+    traY = ((4 * mouseY) / 570) + 90;
+
+    // Apply new positions to the title
+    title.style.backgroundPosition = `${traX}% ${traY}%`;
+  });
+</script>
+<script>
+  function show_popup(className) {
+    const popups = document.querySelectorAll('.' + className + "_content");
+    const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+    popups.forEach(popup => {
+      popup.style.left = '20vw';
+    });
+
+    backgrounds.forEach(background => {
+      background.style.display = 'block';
+    });
+  }
+
+  function hide_popup(className) {
+    const popups = document.querySelectorAll('.' + className + "_content");
+    const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+    popups.forEach(popup => {
+      popup.style.left = '-100vw';
+    });
+
+    backgrounds.forEach(background => {
+      background.style.display = 'none';
+    });
+  }
+</script>
+<script>
+  // Fonction pour appliquer le thème basé sur le localStorage
+  function applyTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark-theme') {
+      document.body.id = 'dark-theme';
+    } else if (savedTheme === "light-theme") {
+      document.body.id = 'light-theme';
+    }
+  }
+
+  // Fonction pour basculer entre les thèmes
+  document.getElementById('theme-toggle-btn').addEventListener('click', function () {
+    // Bascule de la classe dark-mode
+    document.body.classList.toggle('dark-mode');
+
+    // Sauvegarde du thème actuel dans le localStorage
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  // Applique le thème sauvegardé lors du chargement de la page
+  window.onload = applyTheme;
+</script>
+
+</html>
