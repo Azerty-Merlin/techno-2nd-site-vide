@@ -9,13 +9,22 @@
   <link rel="stylesheet" href="css/utility/topbar.css" />
   <link rel="stylesheet" href="css/utility/main.css" />
 </head>
-<body id="dark-theme" class="main">
-  <div className='background'></div >
-  <div class="topbar">toto</div>
-  <div class="content_1"></div>
-  <!-- <div class="container"> -->
+
+<body id="dark-theme" class="main color">
+  <div class='background'></div>
+  <div class="topbar">
+    <div class="topbar_title">Bienvenue dans le Void</div>
+  </div>
+  <div class="content">
+    <div class="flex">
+        <img src="img/vide.webp" alt="Image 1" class="content_item">
+        <img src="img/chose.jpg" alt="Image 2" class="content_item">
+    </div>
+    <a href="./page/main_vide.html" onclick="alert('toto')">Vide</a>
+    
+    <!-- <div class="container"> -->
     <div class="image image-left">
-      <img src="img/vide.webp" alt="Image 1">
+
     </div>
 
     <div class="tear">
@@ -39,12 +48,13 @@
         Q45,90 55,100 
         L0,100 
         L0,0 
-        Z" fill="url(#goldBlackRadial)"/>
+        Z" fill="url(#goldBlackRadial)" />
       </svg>
     </div>
     <div class="image image-right">
       <img src="img/chose.jpg" alt="Image 2">
       <div class="tear"></div>
     </div>
+  </div>
   </div>
 </body>

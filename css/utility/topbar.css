@@ -1,245 +1,48 @@
-@media screen and (min-width: calc(30cm - 1px)) {
-    #dark-theme .topbar {
-        background: linear-gradient(90deg, rgb(5, 5, 102), rgb(0, 221, 255));
-    }
-
-    #dark-theme .topbar_title {
-        color: white;
-    }
-
-    #dark-theme .topbar_item {
-        color: white;
-    }
-
-    #dark-theme .topbar_item:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    #dark-theme .project,
-    #dark-theme .page {
-        background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35) 100%);
-        border-top: 1px solid hsla(0, 0%, 100%, .15);
-        border-bottom: 1px solid hsla(0, 0%, 100%, .15);
-
-    }
-
-    #dark-theme .topbar_scure {
-        background-color: black;
-    }
-
-    #dark-theme .item_project,
-    #dark-theme .item_page {
-        color: #fff;
-        border: #fff 1px solid;
-    }
-
-    #dark-theme .item_project:hover,
-    #dark-theme .item_page:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    #dark-theme .project_bottom {
-        color: #fff;
-        border-top: 1px solid hsla(0, 0%, 100%, .15);
-        background: transparent;
-    }
-
-    #dark-theme .menu_option_1 {
-        text-shadow: 0 1px 2px rgba(0, 0, 0, .8), 0 4px 8px rgba(0, 0, 0, .6);
-        background: rgba(20, 36, 51, .8) linear-gradient(0deg, rgba(20, 61, 102, .2), rgba(20, 61, 102, 0) 50%);
-        box-shadow: inset 0 0 20px rgba(102, 179, 255, .2);
-    }
-
-    #dark-theme .menu_option_2 {
-        text-shadow: 0 1px 2px rgba(0, 0, 0, .8), 0 4px 8px rgba(0, 0, 0, .6);
-        background: rgba(20, 36, 51, .8) linear-gradient(0deg, rgba(20, 61, 102, .2), rgba(20, 61, 102, 0) 50%);
-        box-shadow: inset 0 0 20px rgba(102, 179, 255, .2);
-    }
-
-    #dark-theme .topbar_item_auth {
-        background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35) 100%);
-        color: white;
-    }
-
-    #dark-theme .topbar_item_auth .icon {
-        background-color: #0a0183;
-    }
-
-    #dark-theme .settings-button {
-        background: white;
-        border: 3px solid rgb(0, 221, 255);
-    }
-
-    #dark-theme .settings-button:hover {
-        background: rgb(0, 221, 255);
-    }
-
-    #dark-theme .settings-icon {
-        fill: #0a0183;
-    }
-
-    #dark-theme .option_button {
-        background-color: #006fb2;
-        border: 1px solid #00aeff;
-        color: #fff;
-    }
-
-    #dark-theme .option_button:hover {
-        background-color: #007bc6;
-        border: 1px solid #79d4ff;
-        color: #fff;
-    }
-
-    #dark-theme .option_button:active {
-        background-color: #00629e;
-        border: 1px solid #007bc6;
-        color: hsla(0, 0%, 100%, .8);
-    }
-
-    #dark-theme .option_item {
-        border-top: 1px solid blue;
-        color: white;
-    }
-
-    #dark-theme .option_icon {
-        fill: #fff;
-    }
-
-    #dark-theme .option_item:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    #dark-theme .settings {
-        border-top: 2px solid white;
-    }
+.content {
+    position: fixed;
+    min-height: calc(100vh - 2cm);
+    max-height: calc(100vh - 2cm);
+    top: 2cm;
+    left: 0;
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-@media screen and (max-width: 30cm) {
-    #dark-theme .topbar {
-        background: linear-gradient(90deg, rgb(5, 5, 102), rgb(0, 221, 255));
-    }
+.content_item {
+    margin-left: 2cm;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    border-radius: 100%;
+    border: 0.25cm solid white;
+    max-width: calc((100vw - 6cm) / 2);
+    min-width: calc((100vw - 6cm) / 2);
+    max-height: calc(100vh - 6cm);
+    min-height: calc(100vh - 6cm);
+}
 
-    #dark-theme .topbar_scure {
-        background-color: black;
-    }
+.topbar {
+    min-height: 2cm;
+    max-height: 2cm;
+    min-width: 100%;
+    max-width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+}
 
-    #dark-theme .menu_page_project {
-        background-color: #000d1a;
-        scrollbar-color: rgb(5, 5, 102) transparent;
-    }
-
-    #dark-theme .menu_page_project::-ms-scrollbar {
-        background: transparent;
-    }
-
-    #dark-theme .menu_page_project::-ms-scrollbar-thumb {
-        background: rgb(5, 5, 102);
-    }
-
-    #dark-theme .topbar_item_left {
-        fill: white;
-    }
-
-    #dark-theme .topbar_item_right {
-        fill: white;
-    }
-
-    #dark-theme .menu_page_project_title {
-        color: white;
-    }
-
-
-    #dark-theme .menu_option_title {
-        color: white;
-    }
-
-    #dark-theme .menu_left_cross {
-        fill: #fff;
-    }
-
-    #dark-theme .menu_right_cross { 
-        fill: #fff;
-    }
-
-    #dark-theme .menu_sub_title {
-        color: white;
-    }
-
-    #dark-theme .menu_title:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    #dark-theme .item_project,
-    #dark-theme .item_page {
-        color: white;
-        border-left: #0a0183 solid 3px;
-        border-bottom: #283244 solid 1px;
-    }
-
-    #dark-theme .item_project:hover,
-    #dark-theme .item_page:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    #dark-theme .menu_option {
-        background-color: #000d1a;
-        scrollbar-color: rgb(5, 5, 102) transparent;
-    }
-
-    #dark-theme .topbar_item_auth {
-        background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35) 100%);
-        color: white;
-    }
-
-    #dark-theme .topbar_item_auth .icon {
-        background-color: #0a0183;
-    }
-
-    #dark-theme .settings-button {
-        background: white;
-        border: 3px solid rgb(0, 221, 255);
-    }
-
-    #dark-theme .settings-button:hover {
-        background: rgb(0, 221, 255);
-    }
-
-    #dark-theme .settings-icon {
-        fill: #0a0183;
-    }
-
-    #dark-theme .option_button {
-        background-color: #006fb2;
-        border: 1px solid #00aeff;
-        color: #fff;
-    }
-
-    #dark-theme .option_button:hover {
-        background-color: #007bc6;
-        border: 1px solid #79d4ff;
-        color: #fff;
-    }
-
-    #dark-theme .option_button:active {
-        background-color: #00629e;
-        border: 1px solid #007bc6;
-        color: hsla(0, 0%, 100%, .8);
-    }
-
-    #dark-theme .option_item {
-        border-top: 1px solid blue;
-        color: white;
-    }
-
-    #dark-theme .option_icon {
-        fill: #fff;
-    }
-
-    #dark-theme .option_item:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    #dark-theme .settings {
-        border-top: 2px solid white;
-    }
+.topbar_title {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    font-size: 1cm;
+    min-height: 2cm;
+    max-height: 2cm;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+    padding-left: 1cm;
+    padding-right: 1cm;
 }
