@@ -1,0 +1,17 @@
+#dark-theme .bottombar {
+    background-color: #000d1a;
+    border-top: 2px solid white;
+}
+
+#light-theme .bottombar {
+    background: rgb(208, 208, 208);;
+    border-top: 2px black solid;
+}
+
+.bottombar {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 7cm;
+    max-height: 7cm;
+}
