@@ -86,3 +86,7 @@
 .MuiGrid-root.MuiGrid-item span {
   transform: none;
 }
+
+#react {
+  margin-bottom: 1cm;
+}
