@@ -761,7 +761,7 @@
 
  .Work-content {
      position: relative;
-     margin: 0 0 0 100px
+     margin: 0 2cm 0 2cm
  }
 
  .Work-list li {
@@ -813,4 +813,7 @@
      }
  }
 
- 
+ .Politique_de_confidentialité-list h2,
+ .rgpd-list h2 {
+     color: blue;
+ }

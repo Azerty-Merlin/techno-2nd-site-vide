@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+
     <!-- Icons to support Material Design -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <script type="importmap">
@@ -31,6 +32,7 @@
     <link rel="stylesheet" href="../css/popup.css" />
     <link rel="stylesheet" href="../css/bottombar.css" />
     <link rel="stylesheet" href="../css/button.css" />
+    <link rel="stylesheet" href="../css/stepper.css" />
 </head>
 
 <body id="dark-theme" class="color">
@@ -55,9 +57,10 @@
             <h1 class="popup_title">Quelque chose.</h1>
             <a href="./main_quelque_chose.html">
                 <button class="button-84" role="button"
-                  style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir quelque Chose ?
+                    style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir quelque
+                    Chose ?
                 </button>
-              </a>
+            </a>
         </div>
         <!-- fin du quelque chose -->
 
@@ -86,7 +89,7 @@
 
         <div class="content">
             <!-- Title -->
-            <div class="Section Work" style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 2cm;">
+            <div class="Section Work" style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 0cm;">
                 <div class="Work-content">
                     <div>
                         <h3>
@@ -98,6 +101,32 @@
                 </div>
             </div>
             <!-- fin du title -->
+
+            <!-- stepper -->
+            <div class="wrapper option-1 option-1-1">
+                <ol class="c-stepper">
+                    <li class="c-stepper__item active" data-step="1">
+                        <h3 class="c-stepper__title">Step 1</h3>
+                    </li>
+                    <li class="c-stepper__item" data-step="2">
+                        <h3 class="c-stepper__title">Step 2</h3>
+                    </li>
+                    <li class="c-stepper__item" data-step="3">
+                        <h3 class="c-stepper__title">Step 3</h3>
+                    </li>
+                </ol>
+            </div>
+            <!-- fin du stepper -->
+
+            <div class="Section Work" style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 0cm;">
+                <div class="Work-content">
+                    <p class="home_text">
+                        Comme beaucoup de site web ce site est une coquille vide. Voici un squelette de site web. C’est
+                        vide et ça charge sans fin.
+                    </p>
+                    <div id="react"></div>
+                </div>
+            </div>
 
             <!-- footer -->
             <div style="flex-grow: 1;"></div>
@@ -118,10 +147,10 @@
                     <a href="./politique.html">Politique de confidentialité</a>
                     <a href="./rgpd.html">RGPD</a>
                     <a href="./Cookies.html">Cookie</a>
-                    <a href="./contact.html">Contact</a>
+                    <a href="./contact.html">Contact et liens</a>
                     <a href="./apropos.html">A props</a>
                     <a href="./concept.html">Concept</a>
-                  </div>
+                </div>
             </div>
             <!-- fin du footer -->
 
@@ -131,6 +160,109 @@
         <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
     </div>
 </body>
+<script type="text/babel" data-type="module">
+
+    import * as React from 'react';
+    import { createRoot } from 'react-dom';
+    import {
+        Grid,
+        Skeleton,
+        Box
+    } from '@mui/material';
+
+    function App({ value }) {
+        const sx = {
+            margin: "0",
+            padding: "0",
+            backgroundColor: "grey.900", // Couleur de fond
+            "&::after": { backgroundColor: "grey.800" }, // Couleur de l'effet de vague
+        };
+
+        const pd = {
+            padding: "0.2cm", // Réduire l'espacement interne
+        };
+
+        return (
+            <>
+                <Box>
+                    <Skeleton sx={sx} />
+                    <Skeleton animation="wave" sx={sx} />
+                    <Skeleton animation={false} sx={sx} />
+                </Box>
+                {/* Grille avec espacement */}
+                <Grid container spacing={0}>
+                    {/* Première ligne : un espacement réservé */}
+                    <Grid item xs={12} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '2cm' }} />
+                    </Grid>
+                    <Grid item xs={12} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '2cm' }} />
+                    </Grid>
+
+                    {/* Deuxième ligne : deux colonnes */}
+                    <Grid item xs={4} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '12cm' }} />
+                    </Grid>
+                    <Grid item xs={8} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '12cm' }} />
+                    </Grid>
+
+                    {/* Troisième ligne : une colonne pleine largeur */}
+                    <Grid item xs={12} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '12cm' }} />
+                    </Grid>
+                    <Grid item xs={12} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '4cm' }} />
+                    </Grid>
+
+                    {/* Quatrième ligne : quatre colonnes égales */}
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                    <Grid item xs={3} style={pd}>
+                        <Skeleton sx={{ ...sx, height: '8cm' }} />
+                    </Grid>
+                </Grid>
+
+            </>
+        );
+    }
+
+    // Correctly using ReactDOM.createRoot to render the App component with the value prop
+    createRoot(document.getElementById('react')).render(<App />);
+</script>
 <script>
     function show_popup(className) {
         const popups = document.querySelectorAll('.' + className + "_content");

@@ -33,6 +33,14 @@
   <link rel="stylesheet" href="../css/button.css" />
 </head>
 
+<!--loader-->
+<div class="loader-container">
+  <img src="../img/black-hole.png" class='img-loader' alt="Loading..." />
+  <br />
+  <div class="spinner"></div>
+</div>
+<!-- fin du loader -->
+
 <body id="dark-theme" class="color">
   <div id="main" class="desktop">
     <!-- popup vide -->
@@ -261,7 +269,7 @@
           <a href="./politique.html">Politique de confidentialité</a>
           <a href="./rgpd.html">RGPD</a>
           <a href="./Cookies.html">Cookie</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./contact.html">Contact et liens</a>
           <a href="./apropos.html">A props</a>
           <a href="./concept.html">Concept</a>
         </div>
@@ -359,6 +367,15 @@
 
   // Applique le thème sauvegardé lors du chargement de la page
   window.onload = applyTheme;
+</script>
+<script>
+  // Exemple : Afficher le loader pendant 3 secondes
+  document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.querySelector(".loader-container");
+    setTimeout(() => {
+      loader.style.display = "none"; // Masquer le loader après 3s
+    }, 3000);
+  });
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
