@@ -34,12 +34,11 @@
 
 <body id="dark-theme" class="color">
     <div id="main" class="desktop">
-
-        <!-- popup quelque chose -->
-        <div class="popup_background popup_chose_background" onclick="hide_popup('popup_chose')"></div>
-        <div class="popup_content popup_chose_content" style="color: black;">
-            <img class="popup_background_img" src="../img/chose.jpg">
-            <div class="popup_crose" onclick="hide_popup('popup_chose')">
+        <!-- popup vide -->
+        <div class="popup_background popup_vide_background" onclick="hide_popup('popup_vide')"></div>
+        <div class="popup_content popup_vide_content">
+            <img class="popup_background_img" src="../img/vide.webp">
+            <div class="popup_crose" onclick="hide_popup('popup_vide')">
                 <svg style="fill: currentcolor;">
                     <g id="Navbar-icon-close">
                         <path
@@ -51,9 +50,9 @@
                     </g>
                 </svg>
             </div>
-            <h1 class="popup_title">Quelque chose.</h1>
+            <h1 class="popup_title">Vide</h1>
         </div>
-        <!-- fin du quelque chose -->
+        <!-- fin du popup vide -->
 
         <div class='background'></div>
         <div class="topbar">
@@ -63,8 +62,10 @@
                     Void
                 </div>
             </a>
-            <a href="./home.html"><div class="topbar_item">Home </div></a>
-            <div class="topbar_item" onclick="show_popup('popup_chose')">Quelque chose ?</div>
+            <a href="./home.html">
+                <div class="topbar_item">Home </div>
+            </a>
+            <div class="topbar_item" onclick="show_popup('popup_vide')">Du vide ?</div>
             <div class="topbar_item" style="position: absolute; right: 0; padding: 0;">
                 <button class="settings-button" onclick="toggle_theme()">
                     <svg class="settings-icon">
@@ -84,7 +85,7 @@
                         <h3>
                             <span class="gg-symbol--gradient"
                                 style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></span>
-                            Bienvenue dans le vide.
+                            Bienvenue dans quelque chose.
                         </h3>
                     </div>
                 </div>

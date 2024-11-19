@@ -103,7 +103,8 @@
 }
 
 #dark-theme .background {
-    background: linear-gradient(#141e30, #243b55);
+    background: black;
+    /* background: linear-gradient(#141e30, #243b55); */
 }
 
 #dark-theme .loader-container {

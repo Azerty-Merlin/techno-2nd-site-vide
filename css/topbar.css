@@ -690,6 +690,8 @@ a {
         max-width: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
     }
 
     .content_2 {
@@ -1076,7 +1078,8 @@ a {
         min-height: calc(100vh - 2cm - 2px);
         max-height: calc(100vh - 2cm - 2px);
         padding-top: 2cm;
-        display: block;
+        display: flex;
+        flex-direction: column;
         overflow-x: hidden;
         overflow-y: scroll;
     }
