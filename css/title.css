@@ -813,7 +813,9 @@
      }
  }
 
- .Politique_de_confidentialité-list h2,
- .rgpd-list h2 {
+ .h2blue h2 {
      color: blue;
  }
+ .h1under h1 {
+    text-decoration: underline;
+}

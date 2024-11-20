@@ -26,7 +26,7 @@
   --slice-3: inset(10% -6px 85% 0);
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
-  
+
   content: 'ALTERNATE TEXT';
   display: block;
   position: absolute;
@@ -49,42 +49,52 @@
     clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
   }
+
   10% {
     clip-path: var(--slice-3);
     transform: translate(10px, 10px);
   }
+
   20% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
   }
+
   30% {
     clip-path: var(--slice-3);
     transform: translate(0px, 5px);
   }
+
   40% {
     clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
   }
+
   50% {
     clip-path: var(--slice-3);
     transform: translate(5px, 0px);
   }
+
   60% {
     clip-path: var(--slice-4);
     transform: translate(5px, 10px);
   }
+
   70% {
     clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
   }
+
   80% {
     clip-path: var(--slice-5);
     transform: translate(20px, -10px);
   }
+
   90% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
   }
+
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
@@ -92,6 +102,7 @@
 }
 
 @media (min-width: 768px) {
+
   .button-49,
   .button-49:after {
     width: 200px;
@@ -107,13 +118,13 @@
   background-image: linear-gradient(#464d55, #25292e);
   border-radius: 8px;
   border-width: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 18px;
   height: 52px;
   justify-content: center;
@@ -150,4 +161,116 @@
   .button-84 {
     height: 48px;
   }
+}
+
+.bn31 {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  box-shadow: 0 4px 15px 0 #00a950;
+  border-radius: 40px;
+  border: none;
+  box-sizing: border-box;
+  color: #00a84f;
+  display: block;
+  height: 50px;
+  font-size: 1.4em;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+  padding-right: calc(0.75cm * 2);
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  margin-bottom: 1cm;
+  margin-top: 0;
+  margin-left: 2cm;
+  margin-right: 2cm;
+}
+
+.bn31:hover {
+  color: #fff;
+}
+
+.bn31:active {
+  transform: scale(2);
+}
+
+.bn31 .bn31span {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-left: 0.75cm;
+  padding-right: 0.75cm;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn31:hover .bn31span {
+  background: transparent;
+}
+
+.bn32 {
+  background-image: linear-gradient(to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed);
+  background-size: 300% 100%;
+  color: white;
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  border-radius: 40px;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  font-size: 1.4em;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  padding-left: 0.75cm;
+  padding-right: 0.75cm;
+  z-index: 2;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  margin-bottom: 1cm;
+  margin-top: 0;
+  margin-left: 2cm;
+  margin-right: 2cm;
+}
+
+.bn32:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632:focus {
+  outline: none;
+}
+
+.bn32:active {
+  transform: scale(2);
+}
+
+.bn32 .bn32span {
+  align-items: center;
+  background: transparent;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn32:hover .bn32span {
+  background: transparent;
 }

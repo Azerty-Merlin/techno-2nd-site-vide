@@ -532,6 +532,7 @@ a {
         left: 0;
         overflow: hidden;
         display: flex;
+        z-index: 1;
     }
 
     .topbar_title {
@@ -864,6 +865,7 @@ a {
         top: 0;
         left: 0;
         overflow: hidden;
+        z-index: 1;
     }
 
     .topbar_scure {

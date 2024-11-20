@@ -64,7 +64,12 @@
         </div>
         <!-- fin du quelque chose -->
 
-        <div class='background'></div>
+        <!-- backgrounds -->
+        <video src="../img/void.mp4" autoplay loop muted playsinline class="background dark step_1"
+            style="background-color: transparent;"></video>
+        <div class="background step_2 step_3 step_4 step_5 step_6 step_7" style="display: none;"></div>
+        <!-- fin des backgrounds -->
+
         <div class="topbar">
             <a href="./home.html">
                 <div class="topbar_title">
@@ -105,28 +110,95 @@
             <!-- stepper -->
             <div class="wrapper option-1 option-1-1">
                 <ol class="c-stepper">
-                    <li class="c-stepper__item active" data-step="1">
-                        <h3 class="c-stepper__title">Step 1</h3>
+                    <li class="c-stepper__item active" data-step="1" onclick="changeStep(1)">
+                        <h3 class="c-stepper__title">Info</h3>
                     </li>
-                    <li class="c-stepper__item" data-step="2">
-                        <h3 class="c-stepper__title">Step 2</h3>
+                    <li class="c-stepper__item" data-step="2" onclick="changeStep(2)">
+                        <h3 class="c-stepper__title">Skeleton</h3>
                     </li>
-                    <li class="c-stepper__item" data-step="3">
-                        <h3 class="c-stepper__title">Step 3</h3>
+                    <li class="c-stepper__item" data-step="3" onclick="changeStep(3)">
+                        <h3 class="c-stepper__title">Parler pour ne rien dire</h3>
+                    </li>
+                    <li class="c-stepper__item" data-step="4" onclick="changeStep(4)">
+                        <h3 class="c-stepper__title">loader</h3>
+                    </li>
+                    <li class="c-stepper__item" data-step="5" onclick="changeStep(5)">
+                        <h3 class="c-stepper__title">multiplication du rien</h3>
+                    </li>
+                    <li class="c-stepper__item" data-step="6" onclick="changeStep(6)">
+                        <h3 class="c-stepper__title">Fin</h3>
                     </li>
                 </ol>
             </div>
             <!-- fin du stepper -->
 
-            <div class="Section Work" style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 0cm;">
-                <div class="Work-content">
+            <!-- steps -->
+            <div class="Section Work h2blue h1under"
+                style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 0cm;">
+                <div class="Work-content step_1">
                     <p class="home_text">
-                        Comme beaucoup de site web ce site est une coquille vide. Voici un squelette de site web. C’est
+                        Comme beaucoup de site web ce site est une coquille vide.
+                    </p>
+                    <div style="flex-grow: 1;"></div>
+                    <button class="bn32" style="float: right;" onclick="changeStep(2)">
+                        <span class="bn32span">Voir plus de vide ?</span>
+                    </button>
+                </div>
+                <div class="Work-content step_2" style="display: none">
+                    <p class="home_text">
+                        Voici un squelette de site web. C’est
                         vide et ça charge sans fin.
                     </p>
-                    <div id="react"></div>
+                    <div id="react-Skeleton"></div>
+                    <button class="bn31" style="float: left;" onclick="changeStep(1)">
+                        <span class="bn31span">Précédent</span>
+                    </button>
+                    <button class="bn32" style="float: right;" onclick="changeStep(3)">
+                        <span class="bn32span">Voir autre chose</span>
+                    </button>
+                </div>
+                <div class="Work-content step_3" style="display: none">
+                    <h1>L’art de ne rien dire.</h1>
+                    <p class="home_text">
+                        C’est l‘art dire de dire beaucoup tout en ne disant rien. Depuis le début de ce site je parle
+                        beaucoup mais je ne dis rien c’est tout l’art de ne rien dire. Je dis donc beaucoup tout ne
+                        disant que des mots VIDE de sens.
+                    </p>
+                    <h2>Par exemple lui il ne dit rien :</h2>
+                    <p class="home_text">
+                        L’écriture d’un texte formel, qu’il s’agisse d’un discours, d’une dissertation de français, ou
+                        d’un essai quelconque, me semble être, à mon grand regret, un domaine frustrant pour quiconque
+                        se concentre trop sur le contenu de son essai. En effet, l’expérience m’a appris que celui qui
+                        ne dit rien avec élégance, qui parle bien pour ne rien dire, aura fréquemment plus de
+                        reconnaissance que celui qui dit quelque chose en oubliant de porter son attention sur la forme.
+                        En effet, si le contenu d’un texte de ce type est un point intéressant pour son auteur, il me
+                        semble clair qu’il ne s’agit, malheureusement, que d’un bonus. La justesse de la forme, en
+                        revanche, est une condition n´nécessaire. Moins intuitive pour certains, et aptitude naturelle
+                        pour d’autres, elle constitue le principal facteur discriminant pour le jugement de tout texte
+                        formel. La forme d’un tel document obéit à un certain type de conventions, `a l’acquisition d’un
+                        style particulier qui s’est, apparemment, répandu dans presque tous les domaines, à quelques
+                        nuances près, offrant ainsi un support presque cohérent auquel l’auteur doit obligatoirement
+                        adhérer. L’esthétique qui sous-tend ces conventions n’est peut-ˆêtre pas instinctive pour vous,
+                        et est même peut-être particulièrement disgracieuse à vos yeux. Toutefois, si l’on rejette trop
+                        souvent votre prose, peut-être est-ce du fait de sa non-conformité aux normes établies, et
+                        peut-être que la lecture de ce guide sera à même de vous révéler certaines des manies, certains
+                        des dispositifs que j’utilise pour me conformer `a cette norme. Je ne prétends pas qu’apprendre
+                        à parler pour ne rien dire soit facile et naturel, mais je pense que chacun peut y
+                        arriver.<br><br>
+                        <a href="https://a3nm.net/work/writing/riendire/riendire.pdf">
+                            https://a3nm.net/work/writing/riendire/riendire.pdf Antoine Amarilli
+                        </a>
+                    </p>
+
+                    <button class="bn31" style="float: left;" onclick="changeStep(2)">
+                        <span class="bn31span">Précédent</span>
+                    </button>
+                    <button class="bn32" style="float: right;" onclick="changeStep(4)">
+                        <span class="bn32span">Voir encore autre chose</span>
+                    </button>
                 </div>
             </div>
+            <!-- fin des steps -->
 
             <!-- footer -->
             <div style="flex-grow: 1;"></div>
@@ -185,7 +257,7 @@
         return (
             <>
                 <Box>
-                     {/*<Skeleton sx={sx} />
+                    {/*<Skeleton sx={sx} />
                     <Skeleton animation="wave" sx={sx} />
                     <Skeleton animation={false} sx={sx} />*/}
                 </Box>
@@ -235,7 +307,7 @@
     }
 
     // Correctly using ReactDOM.createRoot to render the App component with the value prop
-    createRoot(document.getElementById('react')).render(<App />);
+    createRoot(document.getElementById('react-Skeleton')).render(<App />);
 </script>
 <script>
     function show_popup(className) {
@@ -300,6 +372,39 @@
 
     // Applique le thème sauvegardé lors du chargement de la page
     window.onload = applyTheme;
+</script>
+<script>
+    function showStepContent(step) {
+        const stepElements = document.querySelectorAll('.step_' + step);
+
+        stepElements.forEach(element => {
+            element.style.display = 'block';
+        });
+    }
+
+    function hideStepContent(step) {
+        const stepElements = document.querySelectorAll('.step_' + step);
+
+        stepElements.forEach(element => {
+            element.style.display = 'none';
+        });
+    }
+
+    // Fonction pour basculer la classe 'active'
+    function toggleActive(step) {
+        const stepElement = document.querySelector('[data-step="' + step + '"]');
+        stepElement.classList.toggle('active');
+    }
+
+    function changeStep(step) {
+        const activeStep = (document.querySelector('.c-stepper__item.active')).getAttribute('data-step');
+
+        hideStepContent(activeStep);
+        showStepContent(step);
+
+        toggleActive(activeStep);
+        toggleActive(step);
+    }
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

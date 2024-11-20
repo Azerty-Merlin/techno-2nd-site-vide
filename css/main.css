@@ -146,3 +146,13 @@
 #light-theme .background-color {
     background: rgb(208, 208, 208) !important;
 }
+
+#light-theme .light,
+#dark-thme .dark {
+    display: block
+}
+
+#light-theme .dark,
+#dark-thme .light {
+    display: none !important
+}
