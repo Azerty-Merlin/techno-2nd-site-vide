@@ -160,11 +160,11 @@
 }
 
 #light-theme .light,
-#dark-thme .dark {
+#dark-theme .dark {
     display: block
 }
 
 #light-theme .dark,
-#dark-thme .light {
+#dark-theme .light {
     display: none !important
 }
