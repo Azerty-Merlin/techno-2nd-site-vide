@@ -56,6 +56,18 @@
     animation: spin-anim 1.2s linear infinite, opacity 3s linear forwards;
 }
 
+.spinner-demo {
+    width: 10vw;
+    height: 10vw;
+    border: 0.75vw solid;
+    position: relative;
+    margin-bottom: 4cm;
+    left: calc(50% - 5vw);
+    border-radius: 50%;
+    border-color: #3d5af1 transparent transparent transparent;
+    animation: spin-anim 1.2s linear infinite;
+}
+
 @keyframes spin-anim {
     0% {
         transform: rotate(0deg);
