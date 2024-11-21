@@ -274,3 +274,58 @@
 .bn32:hover .bn32span {
   background: transparent;
 }
+
+.button-50 {
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0.5cm;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  transition: all 0.3s ease-in-out; /* For non-hover transformations */
+  cursor: pointer;
+}
+
+.button-50:hover {
+  animation: black_hole 2s ease-in-out forwards;
+}
+
+@keyframes black_hole {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes black_hole1 {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: scale(2) rotate(360deg);
+    opacity: 1;
+  }
+  66% {
+    transform: scale(1) rotate(720deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(2880deg);
+    opacity: 0;
+  }
+}
