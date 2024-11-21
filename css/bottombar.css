@@ -12,9 +12,12 @@
 .bottombar {
     bottom: 0;
     left: 0;
-    width: calc(100% - 2cm);
+    width: calc(100% - 3.5cm);
     min-height: 3cm;
-    padding: 1cm;
+    padding-left: 1cm;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    padding-right: 2.5cm;
 }
 
 .bottombar .link {

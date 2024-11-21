@@ -187,7 +187,8 @@
                             <li>
                                 <a class="WorkItem" href="https://getcssscan.com/css-buttons-examples" target="_blank">
                                     <div class="WorkItem-content">
-                                        <span class="WorkItem-title color">https://getcssscan.com/css-buttons-examples</span>
+                                        <span
+                                            class="WorkItem-title color">https://getcssscan.com/css-buttons-examples</span>
                                         <span class="WorkItem-dot"></span>
                                         <span class="WorkItem-subtitle">Css des bouttons</span>
                                     </div>
@@ -237,7 +238,7 @@
                 </div>
             </div>
             <!-- fin des liens -->
-            
+
             <!-- footer -->
             <div style="flex-grow: 1;"></div>
             <div class="bottombar">
@@ -264,6 +265,16 @@
                 </div>
             </div>
             <!-- fin du footer -->
+
+            <!-- scroll top button -->
+            <button class="settings-button" onclick="scrollToTop()"
+                style="position: fixed; right: 0.5cm; bottom: 0.5cm;">
+                <svg fill="currentcolor" class="settings-icon">
+                    <path d="M12 4l-8 8h5v6h6v-6h5z"></path>
+                </svg>
+
+            </button>
+            <!-- fin scroll top button -->
 
         </div>
     </div>
@@ -335,6 +346,18 @@
 
     // Applique le thème sauvegardé lors du chargement de la page
     window.onload = applyTheme;
+</script>
+<script>
+    function scrollToTop() {
+        const contentDivs = document.querySelectorAll('.content');
+
+        contentDivs.forEach(contentDiv => {
+            contentDiv.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Défilement en douceur
+            });
+        });
+    }
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

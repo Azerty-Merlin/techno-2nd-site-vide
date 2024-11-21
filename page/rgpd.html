@@ -162,7 +162,8 @@
                             <h2>6. Contactez-nous</h2>
                             <p class="home_text">
                                 Des questions sur le RGPD ? Envie de nous féliciter pour ce site inutile mais honnête ?
-                                Écrivez-nous à <a href="mailto:rgpd@rien-du-tout.com" target="_blank">rgpd@rien-du-tout.com</a> .
+                                Écrivez-nous à <a href="mailto:rgpd@rien-du-tout.com"
+                                    target="_blank">rgpd@rien-du-tout.com</a> .
                             </p>
                             <p class="home_text">
                                 Avec nous, pas de prise de tête : votre vie privée est sacrée, et ce site est à peu près
@@ -201,6 +202,16 @@
                 </div>
             </div>
             <!-- fin du footer -->
+
+            <!-- scroll top button -->
+            <button class="settings-button" onclick="scrollToTop()"
+                style="position: fixed; right: 0.5cm; bottom: 0.5cm;">
+                <svg fill="currentcolor" class="settings-icon">
+                    <path d="M12 4l-8 8h5v6h6v-6h5z"></path>
+                </svg>
+
+            </button>
+            <!-- fin scroll top button -->
 
         </div>
     </div>
@@ -272,6 +283,18 @@
 
     // Applique le thème sauvegardé lors du chargement de la page
     window.onload = applyTheme;
+</script>
+<script>
+    function scrollToTop() {
+        const contentDivs = document.querySelectorAll('.content');
+
+        contentDivs.forEach(contentDiv => {
+            contentDiv.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Défilement en douceur
+            });
+        });
+    }
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

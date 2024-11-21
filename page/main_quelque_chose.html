@@ -242,10 +242,6 @@
 
     }
 
-    // Applique le thème sauvegardé lors du chargement de la page
-    window.onload = applyTheme;
-</script>
-<script>
     function coordonnees(pos) {
         let crd = pos.coords;
 
@@ -258,6 +254,8 @@
     }
 
     window.onload = () => {
+        applyTheme();
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 coordonnees(position);

@@ -94,7 +94,9 @@
                     Void
                 </div>
             </a>
-            <a href="./home.html"><div class="topbar_item">Home </div></a>
+            <a href="./home.html">
+                <div class="topbar_item">Home </div>
+            </a>
             <div class="topbar_item" onclick="show_popup('popup_vide')">Du vide ?</div>
             <div class="topbar_item" onclick="show_popup('popup_chose')">Quelque chose ?</div>
             <div class="topbar_item" style="position: absolute; right: 0; padding: 0;">
@@ -194,9 +196,19 @@
                     <a href="./apropos.html">A props</a>
                     <a href="./concept.html">Concept</a>
                     <a href="../end.html">Finir la visite ?</a>
-                  </div>
+                </div>
             </div>
             <!-- fin du footer -->
+
+            <!-- scroll top button -->
+            <button class="settings-button" onclick="scrollToTop()"
+                style="position: fixed; right: 0.5cm; bottom: 0.5cm;">
+                <svg fill="currentcolor" class="settings-icon">
+                    <path d="M12 4l-8 8h5v6h6v-6h5z"></path>
+                </svg>
+
+            </button>
+            <!-- fin scroll top button -->
 
         </div>
     </div>
@@ -268,6 +280,18 @@
 
     // Applique le thème sauvegardé lors du chargement de la page
     window.onload = applyTheme;
+</script>
+<script>
+    function scrollToTop() {
+        const contentDivs = document.querySelectorAll('.content');
+
+        contentDivs.forEach(contentDiv => {
+            contentDiv.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Défilement en douceur
+            });
+        });
+    }
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

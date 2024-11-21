@@ -143,7 +143,7 @@
                     </p>
                     <video src="../img/void.mp4" autoplay loop muted playsinline class="light"
                         style="margin: 1cm; width: calc(100% - 2cm);"></video>
-                    <button class="bn32" style="float: right;" onclick="changeStep(2)">
+                    <button class="bn32" style="float: right;" onclick="changeStep(2);">
                         <span class="bn32span">Voir plus de vide ?</span>
                     </button>
                 </div>
@@ -328,6 +328,15 @@
             </div>
             <!-- fin du footer -->
 
+            <!-- scroll top button -->
+            <button class="settings-button" onclick="scrollToTop()"
+                style="position: fixed; right: 0.5cm; bottom: 0.5cm;">
+                <svg fill="currentcolor" class="settings-icon">
+                    <path d="M12 4l-8 8h5v6h6v-6h5z"></path>
+                </svg>
+
+            </button>
+            <!-- fin scroll top button -->
         </div>
     </div>
     <div class="phone">
@@ -498,6 +507,17 @@
         stepElement.classList.toggle('active');
     }
 
+    function scrollToTop() {
+        const contentDivs = document.querySelectorAll('.content');
+
+        contentDivs.forEach(contentDiv => {
+            contentDiv.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Défilement en douceur
+            });
+        });
+    }
+
     function changeStep(step) {
         const activeStep = (document.querySelector('.c-stepper__item.active')).getAttribute('data-step');
 
@@ -506,7 +526,10 @@
 
         toggleActive(activeStep);
         toggleActive(step);
+
+        scrollToTop();
     }
+
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
