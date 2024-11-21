@@ -31,6 +31,9 @@
     <link rel="stylesheet" href="../css/popup.css" />
     <link rel="stylesheet" href="../css/bottombar.css" />
     <link rel="stylesheet" href="../css/button.css" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 
 <body id="dark-theme" class="color">
@@ -54,11 +57,43 @@
             <h1 class="popup_title">Vide</h1>
             <a href="./main_vide.html">
                 <button class="button-84" role="button"
-                  style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir du vide ?
+                    style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir du vide ?
                 </button>
-              </a>
+            </a>
         </div>
         <!-- fin du popup vide -->
+
+        <!-- popup troll -->
+        <div class="popup_background popup_troll_background" onclick="hide_popup('popup_troll')"></div>
+        <div class="popup_content popup_troll_content">
+            <div class="popup_background_img"></div>
+            <div class="popup_crose" onclick="hide_popup('popup_troll')">
+                <svg style="fill: currentcolor;">
+                    <g id="Navbar-icon-close">
+                        <path
+                            d="M47.949,50.625c-0.64,0-1.28-0.244-1.768-0.732L14.635,18.346c-0.977-0.976-0.977-2.559,0-3.535    c0.976-0.977,2.56-0.977,3.535,0l31.546,31.547c0.977,0.976,0.977,2.559,0,3.535C49.229,50.381,48.589,50.625,47.949,50.625z">
+                        </path>
+                        <path
+                            d="M16.051,50.273c-0.64,0-1.28-0.244-1.768-0.732c-0.977-0.976-0.977-2.559,0-3.535l31.898-31.898    c0.976-0.977,2.56-0.977,3.535,0c0.977,0.976,0.977,2.559,0,3.535L17.818,49.541C17.331,50.029,16.69,50.273,16.051,50.273z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <h1 class="popup_title">Plus de vide</h1>
+            <center>
+                <form onsubmit="event.preventDefault(); document.getElementById('troll').style.display = 'block'; " role="search" class="search" style="text-align: left;">
+                    <label for="search">Search for stuff</label>
+                    <input id="search" type="search" placeholder="Search..." autofocus required />
+                    <button type="submit">Go</button>
+                </form>
+                <br>
+                <br>
+                <span id="troll" style="display: none;">
+                    <h1>Et bah non il n'y a rien. Ce site est vide aprés tout.</h1>
+                </span>
+            </center>
+        </div>
+        <!-- fin du popup troll -->
 
         <div class='background'></div>
         <div class="topbar">
@@ -85,7 +120,8 @@
 
         <div class="content">
             <!-- Title -->
-            <div class="Section Work" style="opacity: 1; transform: translate(0px);margin: 0; margin-bottom: 2cm;">
+            <div class="Section Work h2blue h1under"
+                style="opacity: 1; transform: translate(0px);margin: 0; margin-bottom: 2cm;">
                 <div class="Work-content">
                     <div>
                         <h3>
@@ -93,7 +129,21 @@
                                 style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></span>
                             Bienvenue dans quelque chose.
                         </h3>
+                        <div class="chose-list">
+                            <h2>Info</h2>
+                            <p class="home_text" id='p1'></p>
+                            <p class="home_text" id='p2'></p>
+
+                            <h2>Voici une carte OpenStreetMap intégrée</h2>
+                            <div id="map" style="width: cacl(100vw - 2cm); height: calc(95vh - 2cm); overflow: hidden; margin-bottom: 3cm;">
+                            </div>
+
+                            <button class="bn32" style="float: right;" onclick="show_popup('popup_troll')">
+                                <span class="bn32span">Voir plus de chose ?</span>
+                            </button>
+                        </div>
                     </div>
+                    <div class="Arrow" data-ref="arrow" style="transform: translate(0px); opacity: 1;"></div>
                 </div>
             </div>
             <!-- fin du title -->
@@ -121,7 +171,7 @@
                     <a href="./apropos.html">A props</a>
                     <a href="./concept.html">Concept</a>
                     <a href="../end.html">Finir la visite ?</a>
-                  </div>
+                </div>
             </div>
             <!-- fin du footer -->
 
@@ -194,6 +244,53 @@
 
     // Applique le thème sauvegardé lors du chargement de la page
     window.onload = applyTheme;
+</script>
+<script>
+    function coordonnees(pos) {
+        let crd = pos.coords;
+
+        let latitude = crd.latitude;
+        let longitude = crd.longitude;
+
+        document.getElementById('p2').innerHTML =
+            'Latitude : ' + latitude +
+            '<br>Longitude : ' + longitude;
+    }
+
+    window.onload = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                coordonnees(position);
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                // Créer la carte
+                const map = L.map('map').setView([latitude, longitude], 15); // Zoom de 15
+
+                // Ajouter une couche OpenStreetMap
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                // Ajouter un marqueur à la position de l'utilisateur
+                L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup("Vous êtes ici")
+                    .openPopup();
+
+            }, function () {
+                alert("Impossible de récupérer la position de l'utilisateur.");
+            });
+        } else {
+            alert("La géolocalisation n'est pas supportée par votre navigateur.");
+        }
+    }
+
+    document.getElementById('p1').innerHTML =
+        'Langue du navigateur : ' + navigator.language +
+        '<br>Cookies autorisés : ' + navigator.cookieEnabled +
+        '<br>Plateforme utilisée : ' + navigator.platform +
+        '<br>Ram : ' + navigator.deviceMemory +
+        "<br>En ligne: " + (navigator.onLine ? "Oui" : "Non");
 </script>
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

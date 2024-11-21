@@ -113,9 +113,12 @@
                 </h1>
               </div>
               <span style="float: right;">
-                <a href="./page/home.html"><button class="button-50" role="button">Oui</button></a>
+                <a href="./page/home.html" onclick="alert('Vous etes vraiment sure ?')"><button
+                  class="button-50" role="button">Oui</button>
+              </a>
                 <a href="./page/home.html" onclick="alert('Désolé vous n aviez pas le choix ah ah ah !')"><button
-                    class="button-50" role="button">Non</button></a>
+                    class="button-50" role="button">Non</button>
+                </a>
               </span>
               <br>
             </div>
@@ -199,5 +202,16 @@
     <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
   </div>
 </body>
+
+<script>
+  function delayHref(event, element, delay) {
+    event.preventDefault(); // Empêche la navigation immédiate
+    const href = element.getAttribute('href'); // Récupère l'URL du lien
+
+    setTimeout(() => {
+      window.location.href = href; // Redirige après le délai
+    }, delay); // Délai en millisecondes
+  }
+</script>
 
 </html>
