@@ -1,0 +1,61 @@
+.MuiGrid-root.MuiGrid-item span {
+    transform: none;
+}
+
+#react-Skeleton {
+    margin-bottom: 1cm;
+}
+
+.svg-icon {
+    fill: currentColor;
+}
+
+.flex {
+    display: flex;
+}
+
+.MuiPaper-root .black p {
+    color: black !important
+}
+
+a {
+    text-decoration: none;
+}
+
+.overflowX_hidden {
+    overflow-x: hidden;
+}
+
+.h2 h2 {
+    color: blue;
+}
+.h1 h1 {
+   text-decoration: underline;
+}
+
+@media screen and (min-width: calc(30cm - 1px)) {
+    .desktop {
+        display: block;
+    }
+
+    .phone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 30cm) {
+    .desktop {
+        display: none;
+    }
+
+    .phone {
+        display: block;
+    }
+}
+
+p {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    margin: 40px 0;
+}

@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="../css/topbar.css" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/title.css" />
     <link rel="stylesheet" href="../css/popup.css" />
     <link rel="stylesheet" href="../css/bottombar.css" />
@@ -56,9 +58,8 @@
             </div>
             <h1 class="popup_title">Quelque chose.</h1>
             <a href="./main_quelque_chose.html">
-                <button class="button-84" role="button"
-                    style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir quelque
-                    Chose ?
+                <button class="button-dark" role="button">
+                    Voir quelque Chose ?
                 </button>
             </a>
         </div>
@@ -72,6 +73,7 @@
         <div class="background step_2 step_3 step_4 step_5" style="display: none;"></div>
         <!-- fin des backgrounds -->
 
+        <!-- topbar -->
         <div class="topbar">
             <a href="./home.html">
                 <div class="topbar_title">
@@ -93,6 +95,7 @@
                 </button>
             </div>
         </div>
+        <!-- fin de la topbar -->
 
         <div class="content">
             <!-- Title -->
@@ -110,28 +113,26 @@
             <!-- fin du title -->
 
             <!-- stepper -->
-            <div class="wrapper option-1 option-1-1">
-                <ol class="c-stepper">
-                    <li class="c-stepper__item active" data-step="1" onclick="changeStep(1)">
-                        <h3 class="c-stepper__title">Info</h3>
-                    </li>
-                    <li class="c-stepper__item" data-step="2" onclick="changeStep(2)">
-                        <h3 class="c-stepper__title">Skeleton</h3>
-                    </li>
-                    <li class="c-stepper__item" data-step="3" onclick="changeStep(3)">
-                        <h3 class="c-stepper__title">Parler pour ne rien dire</h3>
-                    </li>
-                    <li class="c-stepper__item" data-step="4" onclick="changeStep(4)">
-                        <h3 class="c-stepper__title">loader</h3>
-                    </li>
-                    <li class="c-stepper__item" data-step="5" onclick="changeStep(5)">
-                        <h3 class="c-stepper__title">multiplication du rien</h3>
-                    </li>
-                    <li class="c-stepper__item" data-step="6" onclick="changeStep(6)">
-                        <h3 class="c-stepper__title">Fin</h3>
-                    </li>
-                </ol>
-            </div>
+            <ol class="stepper">
+                <li class="stepper-item active" data-step="1" onclick="changeStep(1)">
+                    <h3 class="stepper-item-title">Info</h3>
+                </li>
+                <li class="stepper-item" data-step="2" onclick="changeStep(2)">
+                    <h3 class="stepper-item-title">Skeleton</h3>
+                </li>
+                <li class="stepper-item" data-step="3" onclick="changeStep(3)">
+                    <h3 class="stepper-item-title">Parler pour ne rien dire</h3>
+                </li>
+                <li class="stepper-item" data-step="4" onclick="changeStep(4)">
+                    <h3 class="stepper-item-title">loader</h3>
+                </li>
+                <li class="stepper-item" data-step="5" onclick="changeStep(5)">
+                    <h3 class="stepper-item-title">multiplication du rien</h3>
+                </li>
+                <li class="stepper-item" data-step="6" onclick="changeStep(6)">
+                    <h3 class="stepper-item-title">Fin</h3>
+                </li>
+            </ol>
             <!-- fin du stepper -->
 
             <!-- steps -->
@@ -193,11 +194,11 @@
                         </a>
                     </p>
 
-                    <button class="bn31" style="float: left;" onclick="changeStep(2)">
-                        <span class="bn31span">Précédent</span>
+                    <button class="button-previous" onclick="changeStep(2)">
+                        <span class="button-previous-span">Précédent</span>
                     </button>
-                    <button class="bn32" style="float: right;" onclick="changeStep(4)">
-                        <span class="bn32span">Voir encore autre chose</span>
+                    <button class="button-next" onclick="changeStep(4)">
+                        <span class="button-next-span">Voir encore autre chose</span>
                     </button>
                 </div>
                 <div class="Work-content step_4" style="display: none">
@@ -519,7 +520,7 @@
     }
 
     function changeStep(step) {
-        const activeStep = (document.querySelector('.c-stepper__item.active')).getAttribute('data-step');
+        const activeStep = (document.querySelector('.stepper-item.active')).getAttribute('data-step');
 
         hideStepContent(activeStep);
         showStepContent(step);

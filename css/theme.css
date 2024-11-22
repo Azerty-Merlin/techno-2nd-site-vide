@@ -1,0 +1,21 @@
+#light-theme .content,
+#light-theme p,
+#light-theme .color {
+    color: black !important;
+}
+
+#dark-theme .content,
+#dark-theme p,
+#dark-theme .color {
+    color: white !important;
+}
+
+#light-theme .light,
+#dark-theme .dark {
+    display: block
+}
+
+#light-theme .dark,
+#dark-theme .light {
+    display: none !important
+}
