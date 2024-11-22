@@ -29,11 +29,14 @@
     margin-top: 1cm;
     color: transparent;
     font-size: 3cm;
+    position: relative;
+    letter-spacing: 1vw;
+}
+
+.Title#title {
     background: url("../img/rainbow-nebula.jpg") repeat;
     background-position: 50% 10%;
     -webkit-background-clip: text;
-    position: relative;
-    letter-spacing: 1vw;
 }
 
 .Subtitle {

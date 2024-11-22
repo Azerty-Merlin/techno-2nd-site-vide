@@ -26,10 +26,10 @@ a {
     overflow-x: hidden;
 }
 
-.h2 h2 {
+.hstyle h2 {
     color: blue;
 }
-.h1 h1 {
+.hstyle h1 {
    text-decoration: underline;
 }
 

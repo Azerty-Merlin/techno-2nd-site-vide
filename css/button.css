@@ -240,6 +240,10 @@
   margin: 1cm;
 }
 
+#light-theme .search {
+  border: solid 1px black;
+}
+
 .search input,
 .search button {
   height: var(--height);

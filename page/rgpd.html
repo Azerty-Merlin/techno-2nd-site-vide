@@ -2,35 +2,19 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>The Void</title>
-    <link rel="icon" href="../img/black-hole.png" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="../img/black-hole.png">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
 
-    <!-- Fonts to support Material Design -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-    <!-- Icons to support Material Design -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <script type="importmap">
-        {
-          "imports": {
-            "react": "https://esm.sh/react@latest",
-            "react-dom": "https://esm.sh/react-dom@latest",
-            "react/jsx-runtime": "https://esm.sh/react@latest/jsx-runtime",
-            "@mui/material": "https://esm.sh/@mui/material@latest?external=react",
-            "@mui/icons-material": "https://esm.sh/@mui/icons-material@latest?external=react"
-          }
-        }
-      </script>
-
-    <link rel="stylesheet" href="../css/topbar.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/title.css" />
-    <link rel="stylesheet" href="../css/popup.css" />
-    <link rel="stylesheet" href="../css/bottombar.css" />
-    <link rel="stylesheet" href="../css/button.css" />
+    <link rel="stylesheet" href="../css/topbar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/title.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/bottombar.css">
+    <link rel="stylesheet" href="../css/button.css">
 </head>
 
 <body id="dark-theme" class="color">
@@ -38,10 +22,10 @@
         <!-- popup vide -->
         <div class="popup_background popup_vide_background" onclick="hide_popup('popup_vide')"></div>
         <div class="popup_content popup_vide_content">
-            <img class="popup_background_img" src="../img/vide.webp">
+            <img class="popup_background_img" src="../img/vide.webp" alt="vide">
             <div class="popup_crose" onclick="hide_popup('popup_vide')">
                 <svg style="fill: currentcolor;">
-                    <g id="Navbar-icon-close">
+                    <g>
                         <path
                             d="M47.949,50.625c-0.64,0-1.28-0.244-1.768-0.732L14.635,18.346c-0.977-0.976-0.977-2.559,0-3.535    c0.976-0.977,2.56-0.977,3.535,0l31.546,31.547c0.977,0.976,0.977,2.559,0,3.535C49.229,50.381,48.589,50.625,47.949,50.625z">
                         </path>
@@ -52,10 +36,8 @@
                 </svg>
             </div>
             <h1 class="popup_title">Vide</h1>
-            <a href="./main_vide.html">
-                <button class="button-84" role="button"
-                    style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir du vide ?
-                </button>
+            <a class="button-dark" href="./main_vide.html">
+                Voir du vide ?
             </a>
         </div>
         <!-- fin du popup vide -->
@@ -63,10 +45,10 @@
         <!-- popup quelque chose -->
         <div class="popup_background popup_chose_background" onclick="hide_popup('popup_chose')"></div>
         <div class="popup_content popup_chose_content" style="color: black;">
-            <img class="popup_background_img" src="../img/chose.jpg">
+            <img class="popup_background_img" src="../img/chose.jpg" alt="chose">
             <div class="popup_crose" onclick="hide_popup('popup_chose')">
                 <svg style="fill: currentcolor;">
-                    <g id="Navbar-icon-close">
+                    <g>
                         <path
                             d="M47.949,50.625c-0.64,0-1.28-0.244-1.768-0.732L14.635,18.346c-0.977-0.976-0.977-2.559,0-3.535    c0.976-0.977,2.56-0.977,3.535,0l31.546,31.547c0.977,0.976,0.977,2.559,0,3.535C49.229,50.381,48.589,50.625,47.949,50.625z">
                         </path>
@@ -77,11 +59,8 @@
                 </svg>
             </div>
             <h1 class="popup_title">Quelque chose.</h1>
-            <a href="./main_quelque_chose.html">
-                <button class="button-84" role="button"
-                    style="top: 50%; left: 50%; position: absolute; transform: translate(-50%, -50%);">Voir quelque
-                    Chose ?
-                </button>
+            <a href="./main_quelque_chose.html" class="button-dark">
+                Voir quelque Chose ?
             </a>
         </div>
         <!-- fin du quelque chose -->
@@ -90,7 +69,7 @@
         <div class="topbar">
             <a href="./home.html">
                 <div class="topbar_title">
-                    <img src="../img/black-hole.png" class="topbar_title_img">
+                    <img src="../img/black-hole.png" class="topbar_title_img" alt="topbar_title_img">
                     Void
                 </div>
             </a>
@@ -99,7 +78,7 @@
             </a>
             <div class="topbar_item" onclick="show_popup('popup_vide')">Du vide ?</div>
             <div class="topbar_item" onclick="show_popup('popup_chose')">Quelque chose ?</div>
-            <div class="topbar_item" style="position: absolute; right: 0; padding: 0;">
+            <div class="topbar_item_right">
                 <button class="settings-button" onclick="toggle_theme()">
                     <svg class="settings-icon">
                         <path id="toggle_theme_icon"
@@ -111,85 +90,77 @@
         </div>
 
         <div class="content">
-            <!-- description du site -->
-            <div class="Section Work" style="opacity: 1; transform: translate(0px); margin-top: 0;">
-                <div class="Work-content">
-                    <div>
-                        <h3>
-                            <span class="gg-symbol--gradient"
-                                style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%);"></span>
-                            Politique de conformité au RGPD
 
-                        </h3>
-                        <div class="rgpd-list h2blue h1under">
-                            <h1>Dernière mise à jour : 17/11/2024</h1>
-                            <p class="home_text">
-                                Bienvenue sur notre site ! Si vous êtes ici, c’est probablement parce que vous avez
-                                cliqué sur quelque chose de mystérieux ou que vous adorez lire des politiques RGPD.
-                                Alors, voici la version officielle... mais avec une touche de légèreté.
-                            </p>
-                            <h2>1. Données personnelles (ou plutôt l’absence totale de)</h2>
-                            <p class="home_text">
-                                Chez nous, pas de formulaire, pas de newsletter, pas de compte utilisateur. En bref,
-                                aucune donnée personnelle ne transite par ici. Vous pouvez donc naviguer en pyjama à 3 h
-                                du matin sans craindre qu’on le sache.
-                            </p>
-                            <h2>2. Cookies (pas ceux qu’on mange)</h2>
-                            <p class="home_text">
-                                Vous savez ces petits fichiers traqueurs ? Eh bien, chez nous, ils sont bannis. Pas de
-                                cookies, pas de mouchards, pas de "je surveille ce que vous faites". Si on devait en
-                                avoir, ce serait des cookies maison, et on les partagerait avec du lait.
-                            </p>
-                            <h2>3. Droit d’accès, de modification et de suppression</h2>
-                            <p class="home_text">
-                                Selon le RGPD, vous avez le droit de demander qu’on vous donne accès à vos données,
-                                qu’on les modifie ou qu’on les supprime. Mais comme on n’a rien sur vous, on a un
-                                sérieux avantage : on n’a rien à vous envoyer, rien à corriger et rien à supprimer.
-                                Facile, non ?
-                            </p>
-                            <h2>4. Sécurité (parce qu’on est sérieux, parfois)</h2>
-                            <p class="home_text">
-                                Même si on ne collecte aucune donnée, on a mis en place des mesures pour que personne ne
-                                vienne jouer au hacker chez nous. Mais bon, franchement, ils seraient déçus : il n’y a
-                                rien à voler ici.
-                            </p>
-                            <h2>5. Modifications de cette politique</h2>
-                            <p class="home_text">
-                                Si un jour, dans un élan de folie, on décide de collecter des données (promis, ce serait
-                                juste pour savoir votre gâteau préféré), cette page sera mise à jour. Mais pour
-                                l’instant, la seule chose qu’on collecte, ce sont des sourires.
-                            </p>
-                            <h2>6. Contactez-nous</h2>
-                            <p class="home_text">
-                                Des questions sur le RGPD ? Envie de nous féliciter pour ce site inutile mais honnête ?
-                                Écrivez-nous à <a href="mailto:rgpd@rien-du-tout.com"
-                                    target="_blank">rgpd@rien-du-tout.com</a> .
-                            </p>
-                            <p class="home_text">
-                                Avec nous, pas de prise de tête : votre vie privée est sacrée, et ce site est à peu près
-                                aussi invasif qu’un cactus dans un désert. Merci de votre visite !
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Arrow" data-ref="arrow" style="transform: translate(0px); opacity: 1;"></div>
+            <!-- rgpd -->
+            <div class="Section">
+                <div class="Section-content hstyle">
+                    <!-- le title est en h3 biens que le suivant soit h1 pour des résons de css -->
+                    <h3 class="Section-title">
+                        <span class="gradient-blue"></span>
+                        Politique de conformité au RGPD
+                    </h3>
+
+                    <h1>Dernière mise à jour : 17/11/2024</h1>
+                    <p>
+                        Bienvenue sur notre site ! Si vous êtes ici, c’est probablement parce que vous avez
+                        cliqué sur quelque chose de mystérieux ou que vous adorez lire des politiques RGPD.
+                        Alors, voici la version officielle... mais avec une touche de légèreté.
+                    </p>
+                    <h2>1. Données personnelles (ou plutôt l’absence totale de)</h2>
+                    <p>
+                        Chez nous, pas de formulaire, pas de newsletter, pas de compte utilisateur. En bref,
+                        aucune donnée personnelle ne transite par ici. Vous pouvez donc naviguer en pyjama à 3 h
+                        du matin sans craindre qu’on le sache.
+                    </p>
+                    <h2>2. Cookies (pas ceux qu’on mange)</h2>
+                    <p>
+                        Vous savez ces petits fichiers traqueurs ? Eh bien, chez nous, ils sont bannis. Pas de
+                        cookies, pas de mouchards, pas de "je surveille ce que vous faites". Si on devait en
+                        avoir, ce serait des cookies maison, et on les partagerait avec du lait.
+                    </p>
+                    <h2>3. Droit d’accès, de modification et de suppression</h2>
+                    <p>
+                        Selon le RGPD, vous avez le droit de demander qu’on vous donne accès à vos données,
+                        qu’on les modifie ou qu’on les supprime. Mais comme on n’a rien sur vous, on a un
+                        sérieux avantage : on n’a rien à vous envoyer, rien à corriger et rien à supprimer.
+                        Facile, non ?
+                    </p>
+                    <h2>4. Sécurité (parce qu’on est sérieux, parfois)</h2>
+                    <p>
+                        Même si on ne collecte aucune donnée, on a mis en place des mesures pour que personne ne
+                        vienne jouer au hacker chez nous. Mais bon, franchement, ils seraient déçus : il n’y a
+                        rien à voler ici.
+                    </p>
+                    <h2>5. Modifications de cette politique</h2>
+                    <p>
+                        Si un jour, dans un élan de folie, on décide de collecter des données (promis, ce serait
+                        juste pour savoir votre gâteau préféré), cette page sera mise à jour. Mais pour
+                        l’instant, la seule chose qu’on collecte, ce sont des sourires.
+                    </p>
+                    <h2>6. Contactez-nous</h2>
+                    <p>
+                        Des questions sur le RGPD ? Envie de nous féliciter pour ce site inutile mais honnête ?
+                        Écrivez-nous à <a href="mailto:rgpd@rien-du-tout.com" target="_blank">rgpd@rien-du-tout.com</a>
+                        .
+                    </p>
+                    <p>
+                        Avec nous, pas de prise de tête : votre vie privée est sacrée, et ce site est à peu près
+                        aussi invasif qu’un cactus dans un désert. Merci de votre visite !
+                    </p>
+
+                    <div class="Arrow"></div>
                 </div>
             </div>
-            <!-- fin de la desription du site -->
+            <!-- fin du rgpd -->
 
             <!-- footer -->
             <div style="flex-grow: 1;"></div>
             <div class="bottombar">
-                <strong>
-                    <h3>© Copyright: 2024 Void.</h3>
-                </strong>
+                <h3>© Copyright: 2024 Void.</h3>
                 <span class="copyright">
                     <strong>Droits réservés… ou pas ?</strong> Ce site est tellement vide que même les cookies n’ont
-                    rien à
-                    grignoter.
-                    Mais bon, si
-                    vous trouvez quelque chose d’intéressant, faites comme chez vous. Juste, n’oubliez pas de fermer la
-                    porte en
-                    sortant.
+                    rien à grignoter. Mais bon, si vous trouvez quelque chose d’intéressant, faites comme chez vous.
+                    Juste, n’oubliez pas de fermer la porte en sortant.
                 </span>
                 <div class="link">
                     <a href="./politique.html">Politique de confidentialité</a>
@@ -204,12 +175,10 @@
             <!-- fin du footer -->
 
             <!-- scroll top button -->
-            <button class="settings-button" onclick="scrollToTop()"
-                style="position: fixed; right: 0.5cm; bottom: 0.5cm;">
-                <svg fill="currentcolor" class="settings-icon">
+            <button class="settings-button bottom" onclick="scrollToTop()">
+                <svg class="settings-icon">
                     <path d="M12 4l-8 8h5v6h6v-6h5z"></path>
                 </svg>
-
             </button>
             <!-- fin scroll top button -->
 
@@ -218,85 +187,82 @@
     <div class="phone">
         <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
     </div>
-</body>
 
-<script>
-    function show_popup(className) {
-        const popups = document.querySelectorAll('.' + className + "_content");
-        const backgrounds = document.querySelectorAll('.' + className + "_background");
+    <script>
+        function show_popup(className) {
+            const popups = document.querySelectorAll('.' + className + "_content");
+            const backgrounds = document.querySelectorAll('.' + className + "_background");
 
-        popups.forEach(popup => {
-            popup.style.left = '20vw';
-        });
-
-        backgrounds.forEach(background => {
-            background.style.display = 'block';
-        });
-    }
-
-    function hide_popup(className) {
-        const popups = document.querySelectorAll('.' + className + "_content");
-        const backgrounds = document.querySelectorAll('.' + className + "_background");
-
-        popups.forEach(popup => {
-            popup.style.left = '-100vw';
-        });
-
-        backgrounds.forEach(background => {
-            background.style.display = 'none';
-        });
-    }
-</script>
-<script>
-    // Fonction pour appliquer le thème basé sur le localStorage
-    function applyTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        const themeIcon = document.getElementById('toggle_theme_icon');
-
-        if (savedTheme === 'dark-theme') {
-            document.body.id = 'dark-theme';
-            themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4');
-
-        } else if (savedTheme === "light-theme") {
-            document.body.id = 'light-theme';
-            themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6');
-
-        }
-    }
-
-    // Fonction pour basculer entre les thèmes
-    function toggle_theme() {
-
-        const savedTheme = localStorage.getItem('theme');
-
-        if (savedTheme === 'dark-theme') {
-            localStorage.setItem('theme', 'light-theme');
-
-        } else if (savedTheme === "light-theme") {
-            localStorage.setItem('theme', 'dark-theme');
-        } else {
-            localStorage.setItem('theme', 'light-theme');
-        }
-        applyTheme();
-
-    }
-
-    // Applique le thème sauvegardé lors du chargement de la page
-    window.onload = applyTheme;
-</script>
-<script>
-    function scrollToTop() {
-        const contentDivs = document.querySelectorAll('.content');
-
-        contentDivs.forEach(contentDiv => {
-            contentDiv.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Défilement en douceur
+            popups.forEach(popup => {
+                popup.style.left = '20vw';
             });
-        });
-    }
-</script>
 
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            backgrounds.forEach(background => {
+                background.style.display = 'block';
+            });
+        }
+
+        function hide_popup(className) {
+            const popups = document.querySelectorAll('.' + className + "_content");
+            const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+            popups.forEach(popup => {
+                popup.style.left = '-100vw';
+            });
+
+            backgrounds.forEach(background => {
+                background.style.display = 'none';
+            });
+        }
+    </script>
+    <script>
+        // Fonction pour appliquer le thème basé sur le localStorage
+        function applyTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('toggle_theme_icon');
+
+            if (savedTheme === 'dark-theme') {
+                document.body.id = 'dark-theme';
+                themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4');
+
+            } else if (savedTheme === "light-theme") {
+                document.body.id = 'light-theme';
+                themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6');
+
+            }
+        }
+
+        // Fonction pour basculer entre les thèmes
+        function toggle_theme() {
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme === 'dark-theme') {
+                localStorage.setItem('theme', 'light-theme');
+
+            } else if (savedTheme === "light-theme") {
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                localStorage.setItem('theme', 'light-theme');
+            }
+            applyTheme();
+        }
+
+        // Applique le thème sauvegardé lors du chargement de la page
+        window.onload = applyTheme;
+    </script>
+    <script>
+        function scrollToTop() {
+            const contentDivs = document.querySelectorAll('.content');
+
+            contentDivs.forEach(contentDiv => {
+                contentDiv.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Défilement en douceur
+                });
+            });
+        }
+    </script>
+
+</body>
 
 </html>

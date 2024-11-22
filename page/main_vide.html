@@ -2,18 +2,28 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>The Void</title>
-    <link rel="icon" href="../img/black-hole.png" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="../img/black-hole.png">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="../css/topbar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/title.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/bottombar.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/stepper.css">
 
     <!-- Fonts to support Material Design -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
 
     <!-- Icons to support Material Design -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="importmap">
         {
           "imports": {
@@ -25,16 +35,6 @@
           }
         }
       </script>
-
-    <link rel="stylesheet" href="../css/topbar.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/custom.css" />
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/title.css" />
-    <link rel="stylesheet" href="../css/popup.css" />
-    <link rel="stylesheet" href="../css/bottombar.css" />
-    <link rel="stylesheet" href="../css/button.css" />
-    <link rel="stylesheet" href="../css/stepper.css" />
 </head>
 
 <body id="dark-theme" class="color">
@@ -43,10 +43,10 @@
         <!-- popup quelque chose -->
         <div class="popup_background popup_chose_background" onclick="hide_popup('popup_chose')"></div>
         <div class="popup_content popup_chose_content" style="color: black;">
-            <img class="popup_background_img" src="../img/chose.jpg">
+            <img class="popup_background_img" src="../img/chose.jpg" alt="chose">
             <div class="popup_crose" onclick="hide_popup('popup_chose')">
                 <svg style="fill: currentcolor;">
-                    <g id="Navbar-icon-close">
+                    <g>
                         <path
                             d="M47.949,50.625c-0.64,0-1.28-0.244-1.768-0.732L14.635,18.346c-0.977-0.976-0.977-2.559,0-3.535    c0.976-0.977,2.56-0.977,3.535,0l31.546,31.547c0.977,0.976,0.977,2.559,0,3.535C49.229,50.381,48.589,50.625,47.949,50.625z">
                         </path>
@@ -57,27 +57,23 @@
                 </svg>
             </div>
             <h1 class="popup_title">Quelque chose.</h1>
-            <a href="./main_quelque_chose.html">
-                <button class="button-dark" role="button">
-                    Voir quelque Chose ?
-                </button>
+            <a href="./main_quelque_chose.html" class="button-dark">
+                Voir quelque Chose ?
             </a>
         </div>
         <!-- fin du quelque chose -->
 
         <!-- backgrounds -->
-        <video src="../img/void.mp4" autoplay loop muted playsinline class="background dark step_1"
-            style="background-color: transparent;"></video>
-        <video src="../img/spirale.mp4" autoplay loop muted playsinline class="background dark step_6"
-            style="background-color: transparent; display: none;"></video>
+        <video src="../img/void.mp4" autoplay loop muted playsinline class="background custom dark step_1"></video>
+        <video src="../img/spirale.mp4" autoplay loop muted playsinline class="background custom dark step_6"
+            style="display: none;"></video>
         <div class="background step_2 step_3 step_4 step_5" style="display: none;"></div>
         <!-- fin des backgrounds -->
 
-        <!-- topbar -->
         <div class="topbar">
             <a href="./home.html">
                 <div class="topbar_title">
-                    <img src="../img/black-hole.png" class="topbar_title_img">
+                    <img src="../img/black-hole.png" class="topbar_title_img" alt="topbar_title_img">
                     Void
                 </div>
             </a>
@@ -85,7 +81,7 @@
                 <div class="topbar_item">Home </div>
             </a>
             <div class="topbar_item" onclick="show_popup('popup_chose')">Quelque chose ?</div>
-            <div class="topbar_item" style="position: absolute; right: 0; padding: 0;">
+            <div class="topbar_item_right">
                 <button class="settings-button" onclick="toggle_theme()">
                     <svg class="settings-icon">
                         <path id="toggle_theme_icon"
@@ -95,22 +91,19 @@
                 </button>
             </div>
         </div>
-        <!-- fin de la topbar -->
 
         <div class="content">
-            <!-- Title -->
-            <div class="Section Work" style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 0cm;">
-                <div class="Work-content">
-                    <div>
-                        <h3>
-                            <span class="gg-symbol--gradient"
-                                style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></span>
-                            Bienvenue dans le vide.
-                        </h3>
-                    </div>
+
+            <!-- titre -->
+            <div class="Section">
+                <div class="Section-content">
+                    <h3 class="Section-title">
+                        <span class="gradient-blue"></span>
+                        Bienvenue dans le vide.
+                    </h3>
                 </div>
             </div>
-            <!-- fin du title -->
+            <!-- fin du titre -->
 
             <!-- stepper -->
             <ol class="stepper">
@@ -136,40 +129,40 @@
             <!-- fin du stepper -->
 
             <!-- steps -->
-            <div class="Section Work h2blue h1under"
-                style="opacity: 1; transform: translate(0px); margin: 0; margin-bottom: 0cm;">
-                <div class="Work-content step_1">
-                    <p class="home_text">
+            <div class="Section hstyle">
+                <div class="Section-content step_1">
+                    <p>
                         Comme beaucoup de site web ce site est une coquille vide.
                     </p>
                     <video src="../img/void.mp4" autoplay loop muted playsinline class="light"
                         style="margin: 1cm; width: calc(100% - 2cm);"></video>
-                    <button class="bn32" style="float: right;" onclick="changeStep(2);">
-                        <span class="bn32span">Voir plus de vide ?</span>
+
+                    <button class="button-next" onclick="changeStep(2);">
+                        <span class="button-next-span">Voir plus de vide ?</span>
                     </button>
                 </div>
-                <div class="Work-content step_2" style="display: none">
-                    <p class="home_text">
+                <div class="Section-content step_2" style="display: none">
+                    <p>
                         Voici un squelette de site web. C’est
                         vide et ça charge sans fin.
                     </p>
                     <div id="react-Skeleton"></div>
-                    <button class="bn31" style="float: left;" onclick="changeStep(1)">
-                        <span class="bn31span">Précédent</span>
+                    <button class="button-previous" onclick="changeStep(1)">
+                        <span class="button-previous-span">Précédent</span>
                     </button>
-                    <button class="bn32" style="float: right;" onclick="changeStep(3)">
-                        <span class="bn32span">Voir autre chose</span>
+                    <button class="button-next" onclick="changeStep(3)">
+                        <span class="button-next-span">Voir autre chose</span>
                     </button>
                 </div>
-                <div class="Work-content step_3" style="display: none">
+                <div class="Section-content step_3" style="display: none">
                     <h1>L’art de ne rien dire.</h1>
-                    <p class="home_text">
+                    <p>
                         C’est l‘art dire de dire beaucoup tout en ne disant rien. Depuis le début de ce site je parle
                         beaucoup mais je ne dis rien c’est tout l’art de ne rien dire. Je dis donc beaucoup tout ne
                         disant que des mots VIDE de sens.
                     </p>
                     <h2>Par exemple lui il ne dit rien :</h2>
-                    <p class="home_text">
+                    <p>
                         L’écriture d’un texte formel, qu’il s’agisse d’un discours, d’une dissertation de français, ou
                         d’un essai quelconque, me semble être, à mon grand regret, un domaine frustrant pour quiconque
                         se concentre trop sur le contenu de son essai. En effet, l’expérience m’a appris que celui qui
@@ -201,24 +194,24 @@
                         <span class="button-next-span">Voir encore autre chose</span>
                     </button>
                 </div>
-                <div class="Work-content step_4" style="display: none">
-                    <p class="home_text">
+                <div class="Section-content step_4" style="display: none">
+                    <p>
                         Voici un loader. Cool Non !!!
                     </p>
 
                     <div class="spinner-demo"></div>
 
-                    <button class="bn31" style="float: left;" onclick="changeStep(3)">
-                        <span class="bn31span">Précédent</span>
+                    <button class="button-previous" onclick="changeStep(3)">
+                        <span class="button-previous-span">Précédent</span>
                     </button>
-                    <button class="bn32" style="float: right;" onclick="changeStep(5)">
-                        <span class="bn32span">Voir autre chose</span>
+                    <button class="button-next" onclick="changeStep(5)">
+                        <span class="button-next-span">Voir autre chose</span>
                     </button>
                 </div>
-                <div class="Work-content step_5" style="display: none">
+                <div class="Section-content step_5" style="display: none">
                     <h1>Raymond Devos</h1>
                     <h2>une petite apologie du vide.</h2>
-                    <p class="home_text">
+                    <p>
                         Puisqu’on m’a demandé de faire un discours, je vous signale tout de suite, Mesdames et
                         Messieurs, que je vais parler pour ne rien dire.<br>
                         Je sais ! Vous pensez : “S’il n’a rien à dire … il ferait mieux de se taire !”<br>
@@ -230,7 +223,7 @@
                         Je veux en faire profiter les autres ! Et si, vous-mêmes, mesdames et messieurs, vous n’avez à
                         rien dire, eh bien, on en parle, on en discute ! Je ne suis pas ennemi du colloque.<br>
                     </p>
-                    <p class="home_text">
+                    <p>
                         Mais, me direz-vous, si on en parle pour ne rien dire, de quoi allons-nous parler ?<br>
                         Eh bien, de rien ! De rien !<br>
                         Car rien … c’est pas rien. La preuve c’est qu’on peut le soustraire.<br>
@@ -246,7 +239,7 @@
                         Trois multiplié par trois = neuf.<br>
                         Cela fait rien de neuf !<br>
                     </p>
-                    <p class="home_text">
+                    <p>
                         Bon ! Parlons d’autres choses ! Parlons de la situation, tenez !<br>
                         parlons de la situation ! Sans préciser laquelle !<br>
                         Si vous le permettez, je vais faire brièvement l’historique de la situation, quelle qu’elle soit
@@ -273,30 +266,28 @@
                         </a>
                     </p>
 
-                    <button class="bn31" style="float: left;" onclick="changeStep(4)">
-                        <span class="bn31span">Précédent</span>
+                    <button class="button-previous" onclick="changeStep(4)">
+                        <span class="button-previous-span">Précédent</span>
                     </button>
-                    <button class="bn32" style="float: right;" onclick="changeStep(6)">
-                        <span class="bn32span">Voir encore autre chose</span>
+                    <button class="button-next" onclick="changeStep(6)">
+                        <span class="button-next-span">Voir encore autre chose</span>
                     </button>
                 </div>
-                <div class="Work-content step_6" style="display: none">
-                    <h1>
-                        <mark style="background-color: aqua;">
-                            On est d’accord ce site web était NULL. Voici un petit trou noir
-                            pour finir
-                        </mark>
+                <div class="Section-content step_6" style="display: none;">
+                    <h1 class="Section-title-bis" style="background-color: rgb(0, 0, 255, 0.5);">
+                        On est d’accord ce site web était NULL. Voici un petit trou noir
+                        pour finir
+
                     </h1>
                     <video src="../img/spirale.mp4" autoplay loop muted playsinline class="light"
                         style="margin: 1cm; width: calc(100% - 2cm);"></video>
 
-                    <button class="bn31" style="float: left;" onclick="changeStep(5)">
-                        <span class="bn31span">Précédent</span>
+                    <button class="button-previous" onclick="changeStep(5)">
+                        <span class="button-previous-span">Précédent</span>
                     </button>
-                    <a href="./main_quelque_chose.html">
-                        <button class="bn32" style="float: right;">
-                            <span class="bn32span">Voir quelque chose pour changer ?</span>
-                        </button>
+
+                    <a href="./main_quelque_chose.html" class="button-next">
+                        <span class="button-next-span">Voir quelque chose pour changer ?</span>
                     </a>
                 </div>
             </div>
@@ -305,17 +296,11 @@
             <!-- footer -->
             <div style="flex-grow: 1;"></div>
             <div class="bottombar">
-                <strong>
-                    <h3>© Copyright: 2024 Void.</h3>
-                </strong>
+                <h3>© Copyright: 2024 Void.</h3>
                 <span class="copyright">
                     <strong>Droits réservés… ou pas ?</strong> Ce site est tellement vide que même les cookies n’ont
-                    rien à
-                    grignoter.
-                    Mais bon, si
-                    vous trouvez quelque chose d’intéressant, faites comme chez vous. Juste, n’oubliez pas de fermer la
-                    porte en
-                    sortant.
+                    rien à grignoter. Mais bon, si vous trouvez quelque chose d’intéressant, faites comme chez vous.
+                    Juste, n’oubliez pas de fermer la porte en sortant.
                 </span>
                 <div class="link">
                     <a href="./politique.html">Politique de confidentialité</a>
@@ -330,209 +315,203 @@
             <!-- fin du footer -->
 
             <!-- scroll top button -->
-            <button class="settings-button" onclick="scrollToTop()"
-                style="position: fixed; right: 0.5cm; bottom: 0.5cm;">
-                <svg fill="currentcolor" class="settings-icon">
+            <button class="settings-button bottom" onclick="scrollToTop()">
+                <svg class="settings-icon">
                     <path d="M12 4l-8 8h5v6h6v-6h5z"></path>
                 </svg>
-
             </button>
             <!-- fin scroll top button -->
+
         </div>
     </div>
     <div class="phone">
         <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
     </div>
-</body>
-<script type="text/babel" data-type="module">
 
-    import * as React from 'react';
-    import { createRoot } from 'react-dom';
-    import {
-        Grid,
-        Skeleton,
-        Box
-    } from '@mui/material';
+    <script>
+        function showStepContent(step) {
+            const stepElements = document.querySelectorAll('.step_' + step);
 
-    function App({ value }) {
-        const sx = {
-            margin: "0",
-            padding: "0",
-            backgroundColor: "grey.900", // Couleur de fond
-            "&::after": { backgroundColor: "grey.800" }, // Couleur de l'effet de vague
-        };
-
-        const pd = {
-            padding: "0.2cm", // Réduire l'espacement interne
-        };
-
-        return (
-            <>
-                <Box>
-                    {/*<Skeleton sx={sx} />
-                    <Skeleton animation="wave" sx={sx} />
-                    <Skeleton animation={false} sx={sx} />*/}
-                </Box>
-                {/* Grille avec espacement */}
-                <Grid container spacing={0}>
-                    {/* Première ligne : un espacement réservé */}
-                    <Grid item xs={12} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '2cm' }} />
-                    </Grid>
-                    <Grid item xs={12} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '2cm' }} />
-                    </Grid>
-
-                    {/* Deuxième ligne : deux colonnes */}
-                    <Grid item xs={4} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '12cm' }} />
-                    </Grid>
-                    <Grid item xs={8} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '12cm' }} />
-                    </Grid>
-
-                    {/* Troisième ligne : une colonne pleine largeur */}
-                    <Grid item xs={12} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '12cm' }} />
-                    </Grid>
-                    <Grid item xs={12} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '4cm' }} />
-                    </Grid>
-
-                    {/* Quatrième ligne : quatre colonnes égales */}
-                    <Grid item xs={3} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '8cm' }} />
-                    </Grid>
-                    <Grid item xs={3} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '8cm' }} />
-                    </Grid>
-                    <Grid item xs={3} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '8cm' }} />
-                    </Grid>
-                    <Grid item xs={3} style={pd}>
-                        <Skeleton sx={{ ...sx, height: '8cm' }} />
-                    </Grid>
-                </Grid>
-
-            </>
-        );
-    }
-
-    // Correctly using ReactDOM.createRoot to render the App component with the value prop
-    createRoot(document.getElementById('react-Skeleton')).render(<App />);
-</script>
-<script>
-    function show_popup(className) {
-        const popups = document.querySelectorAll('.' + className + "_content");
-        const backgrounds = document.querySelectorAll('.' + className + "_background");
-
-        popups.forEach(popup => {
-            popup.style.left = '20vw';
-        });
-
-        backgrounds.forEach(background => {
-            background.style.display = 'block';
-        });
-    }
-
-    function hide_popup(className) {
-        const popups = document.querySelectorAll('.' + className + "_content");
-        const backgrounds = document.querySelectorAll('.' + className + "_background");
-
-        popups.forEach(popup => {
-            popup.style.left = '-100vw';
-        });
-
-        backgrounds.forEach(background => {
-            background.style.display = 'none';
-        });
-    }
-</script>
-<script>
-    // Fonction pour appliquer le thème basé sur le localStorage
-    function applyTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        const themeIcon = document.getElementById('toggle_theme_icon');
-
-        if (savedTheme === 'dark-theme') {
-            document.body.id = 'dark-theme';
-            themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4');
-
-        } else if (savedTheme === "light-theme") {
-            document.body.id = 'light-theme';
-            themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6');
-
-        }
-    }
-
-    // Fonction pour basculer entre les thèmes
-    function toggle_theme() {
-
-        const savedTheme = localStorage.getItem('theme');
-
-        if (savedTheme === 'dark-theme') {
-            localStorage.setItem('theme', 'light-theme');
-
-        } else if (savedTheme === "light-theme") {
-            localStorage.setItem('theme', 'dark-theme');
-        } else {
-            localStorage.setItem('theme', 'light-theme');
-        }
-        applyTheme();
-
-    }
-
-    // Applique le thème sauvegardé lors du chargement de la page
-    window.onload = applyTheme;
-</script>
-<script>
-    function showStepContent(step) {
-        const stepElements = document.querySelectorAll('.step_' + step);
-
-        stepElements.forEach(element => {
-            element.style.display = 'block';
-        });
-    }
-
-    function hideStepContent(step) {
-        const stepElements = document.querySelectorAll('.step_' + step);
-
-        stepElements.forEach(element => {
-            element.style.display = 'none';
-        });
-    }
-
-    // Fonction pour basculer la classe 'active'
-    function toggleActive(step) {
-        const stepElement = document.querySelector('[data-step="' + step + '"]');
-        stepElement.classList.toggle('active');
-    }
-
-    function scrollToTop() {
-        const contentDivs = document.querySelectorAll('.content');
-
-        contentDivs.forEach(contentDiv => {
-            contentDiv.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Défilement en douceur
+            stepElements.forEach(element => {
+                element.style.display = 'block';
             });
-        });
-    }
+        }
 
-    function changeStep(step) {
-        const activeStep = (document.querySelector('.stepper-item.active')).getAttribute('data-step');
+        function hideStepContent(step) {
+            const stepElements = document.querySelectorAll('.step_' + step);
 
-        hideStepContent(activeStep);
-        showStepContent(step);
+            stepElements.forEach(element => {
+                element.style.display = 'none';
+            });
+        }
 
-        toggleActive(activeStep);
-        toggleActive(step);
+        // Fonction pour basculer la classe 'active'
+        function toggleActive(step) {
+            const stepElement = document.querySelector('[data-step="' + step + '"]');
+            stepElement.classList.toggle('active');
+        }
 
-        scrollToTop();
-    }
+        function scrollToTop() {
+            const contentDivs = document.querySelectorAll('.content');
 
-</script>
+            contentDivs.forEach(contentDiv => {
+                contentDiv.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Défilement en douceur
+                });
+            });
+        }
 
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        function changeStep(step) {
+            const activeStep = (document.querySelector('.stepper-item.active')).getAttribute('data-step');
+
+            hideStepContent(activeStep);
+            showStepContent(step);
+
+            toggleActive(activeStep);
+            toggleActive(step);
+
+            scrollToTop();
+        }
+
+    </script>
+    <script type="text/babel" data-type="module">
+
+        import * as React from 'react';
+        import { createRoot } from 'react-dom';
+        import {
+            Grid,
+            Skeleton,
+            Box
+        } from '@mui/material';
+
+        function App({ value }) {
+            const sx = {
+                margin: "0",
+                padding: "0",
+                backgroundColor: "grey.900", // Couleur de fond
+                "&::after": { backgroundColor: "grey.800" }, // Couleur de l'effet de vague
+            };
+
+            const pd = {
+                padding: "0.2cm", // Réduire l'espacement interne
+            };
+
+            return (
+                <>
+                    {/* Grille avec espacement */}
+                    <Grid container spacing={0}>
+                        {/* Première ligne : un espacement réservé */}
+                        <Grid item xs={12} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '2cm' }} />
+                        </Grid>
+                        <Grid item xs={12} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '2cm' }} />
+                        </Grid>
+
+                        {/* Deuxième ligne : deux colonnes */}
+                        <Grid item xs={4} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '12cm' }} />
+                        </Grid>
+                        <Grid item xs={8} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '12cm' }} />
+                        </Grid>
+
+                        {/* Troisième ligne : une colonne pleine largeur */}
+                        <Grid item xs={12} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '12cm' }} />
+                        </Grid>
+                        <Grid item xs={12} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '4cm' }} />
+                        </Grid>
+
+                        {/* Quatrième ligne : quatre colonnes égales */}
+                        <Grid item xs={3} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '8cm' }} />
+                        </Grid>
+                        <Grid item xs={3} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '8cm' }} />
+                        </Grid>
+                        <Grid item xs={3} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '8cm' }} />
+                        </Grid>
+                        <Grid item xs={3} style={pd}>
+                            <Skeleton sx={{ ...sx, height: '8cm' }} />
+                        </Grid>
+                    </Grid>
+
+                </>
+            );
+        }
+
+        // Correctly using ReactDOM.createRoot to render the App component with the value prop
+        createRoot(document.getElementById('react-Skeleton')).render(<App />);
+    </script>
+    <script>
+        function show_popup(className) {
+            const popups = document.querySelectorAll('.' + className + "_content");
+            const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+            popups.forEach(popup => {
+                popup.style.left = '20vw';
+            });
+
+            backgrounds.forEach(background => {
+                background.style.display = 'block';
+            });
+        }
+
+        function hide_popup(className) {
+            const popups = document.querySelectorAll('.' + className + "_content");
+            const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+            popups.forEach(popup => {
+                popup.style.left = '-100vw';
+            });
+
+            backgrounds.forEach(background => {
+                background.style.display = 'none';
+            });
+        }
+    </script>
+    <script>
+        // Fonction pour appliquer le thème basé sur le localStorage
+        function applyTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('toggle_theme_icon');
+
+            if (savedTheme === 'dark-theme') {
+                document.body.id = 'dark-theme';
+                themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4');
+
+            } else if (savedTheme === "light-theme") {
+                document.body.id = 'light-theme';
+                themeIcon.setAttribute('d', 'M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6');
+
+            }
+        }
+
+        // Fonction pour basculer entre les thèmes
+        function toggle_theme() {
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme === 'dark-theme') {
+                localStorage.setItem('theme', 'light-theme');
+
+            } else if (savedTheme === "light-theme") {
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                localStorage.setItem('theme', 'light-theme');
+            }
+            applyTheme();
+        }
+
+        // Applique le thème sauvegardé lors du chargement de la page
+        window.onload = applyTheme;
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</body>
 
 </html>
