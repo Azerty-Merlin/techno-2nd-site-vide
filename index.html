@@ -2,218 +2,200 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>The Void</title>
-  <link rel="icon" href="./img/black-hole.png" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="icon" href="./img/black-hole.png">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
 
-  <link rel="stylesheet" href="./css/topbar.css" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/custom.css" />
-  <link rel="stylesheet" href="./css/theme.css" />
-  <link rel="stylesheet" href="./css/title.css" />
-  <link rel="stylesheet" href="./css/popup.css" />
-  <link rel="stylesheet" href="./css/bottombar.css" />
-  <link rel="stylesheet" href="./css/button.css" />
+  <link rel="stylesheet" href="./css/topbar.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/title.css">
+  <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./css/bottombar.css">
+  <link rel="stylesheet" href="./css/button.css">
 </head>
 
 <body id="dark-theme" class="color">
-  <div id="main" class="desktop" style="overflow: hidden;">
-    <video src="./img/intro.mp4" autoplay loop muted playsinline class="background"
-      style="background-color: transparent;"></video>
+  <div id="main" class="desktop">
+    <!-- popup troll -->
+    <div class="popup_background popup_troll_background"
+      onclick="hide_popup('popup_troll'); window.location.href = './page/home.html'"></div>
+    <div class="popup_content popup_troll_content">
+      <div class="popup_crose" onclick="hide_popup('popup_troll'); window.location.href = './page/home.html'">
+        <svg style="fill: currentcolor;">
+          <g>
+            <path
+              d="M47.949,50.625c-0.64,0-1.28-0.244-1.768-0.732L14.635,18.346c-0.977-0.976-0.977-2.559,0-3.535    c0.976-0.977,2.56-0.977,3.535,0l31.546,31.547c0.977,0.976,0.977,2.559,0,3.535C49.229,50.381,48.589,50.625,47.949,50.625z">
+            </path>
+            <path
+              d="M16.051,50.273c-0.64,0-1.28-0.244-1.768-0.732c-0.977-0.976-0.977-2.559,0-3.535l31.898-31.898    c0.976-0.977,2.56-0.977,3.535,0c0.977,0.976,0.977,2.559,0,3.535L17.818,49.541C17.331,50.029,16.69,50.273,16.051,50.273z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <h1 class="popup_title">Troll</h1>
+      <center>
+        <h1>Désolé vous n'aviez pas le choix ah ah ah !</h1>
+      </center>
+    </div>
+    <!-- fin du troll popup -->
+
+    <video src="./img/intro.mp4" autoplay loop muted playsinline class="background custom"></video>
+
     <!-- title -->
-    <div class="Section Home" style="margin-top: 0.5cm">
-      <div class="Home-content">
+    <div class="Section">
+      <div class="Section-content">
         <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--3"></div>
+          <div class="symbol symbol--disc"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--3"></div>
+          <div class="symbol symbol--disc"></div>
         </div>
         <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
+          <div class="symbol symbol--rect symbol--8 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--8 gradient-orange"></div>
         </div>
         <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
+          <div class="symbol symbol--rect symbol--3 gradient-orange"></div>
+          <div class="symbol symbol--square"></div>
+          <div class="symbol symbol--rect symbol--2"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--3 gradient-orange"></div>
+          <div class="symbol symbol--square"></div>
+          <div class="symbol symbol--rect symbol--2"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
         </div>
         <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--3"></div>
+          <div class="symbol symbol--disc"></div>
+          <div class="symbol symbol--rect symbol--8 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--3"></div>
+          <div class="symbol symbol--disc"></div>
+          <div class="symbol symbol--rect symbol--8 gradient-orange"></div>
         </div>
         <div class="gg"></div>
-        <div class="gg gg--indent">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
+        <div class="gg -indent">
+          <div class="symbol symbol--rect symbol--3 gradient-orange"></div>
+          <div class="symbol symbol--square"></div>
+          <div class="symbol symbol--rect symbol--2"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--3 gradient-orange"></div>
+          <div class="symbol symbol--square"></div>
+          <div class="symbol symbol--rect symbol--2"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
         </div>
-        <div class="Title" style="opacity: 1, ">
-          <div class="Title" data-component="Title">
-            <div class="container">
-              <div class="flex">
-                <svg xmlns="http://www.w3.org/2000/svg" width="10cm" height="10cm" viewBox="0 0 24 24" fill="red"
-                  style="overflow: hidden;">
-                  <path
-                    d="M11.9998 9.00023V13.0002M11.9998 17.0002H12.0098M10.6151 3.89195L2.39019 18.0986C1.93398 18.8866 1.70588 19.2806 1.73959 19.6039C1.769 19.886 1.91677 20.1423 2.14613 20.309C2.40908 20.5002 2.86435 20.5002 3.77487 20.5002H20.2246C21.1352 20.5002 21.5904 20.5002 21.8534 20.309C22.0827 20.1423 22.2305 19.886 22.2599 19.6039C22.2936 19.2806 22.0655 18.8866 21.6093 18.0986L13.3844 3.89195C12.9299 3.10679 12.7026 2.71421 12.4061 2.58235C12.1474 2.46734 11.8521 2.46734 11.5935 2.58235C11.2969 2.71421 11.0696 3.10679 10.6151 3.89195Z"
-                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <h1 style="color: white; font-size: 1.5cm;">
-                  <font color="red">Caution:</font> Vous vous apretez a tomber dans un trou noir. Ce site est
-                  completement vide. Etes-vous sur de vouloir continuer ?
-                </h1>
-              </div>
-              <span style="float: right;">
-                <a href="./page/home.html" onclick="alert('Vous etes vraiment sure ?')"><button class="button-50"
-                    role="button">Oui</button>
-                </a>
-                <a href="./page/home.html" onclick="alert('Désolé vous n aviez pas le choix ah ah ah !')"><button
-                    class="button-50" role="button">Non</button>
-                </a>
-              </span>
-              <br>
-            </div>
-          </div>
+
+        <div class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10cm" height="10cm" viewBox="0 0 24 24" fill="red"
+            style="overflow: hidden;">
+            <path
+              d="M11.9998 9.00023V13.0002M11.9998 17.0002H12.0098M10.6151 3.89195L2.39019 18.0986C1.93398 18.8866 1.70588 19.2806 1.73959 19.6039C1.769 19.886 1.91677 20.1423 2.14613 20.309C2.40908 20.5002 2.86435 20.5002 3.77487 20.5002H20.2246C21.1352 20.5002 21.5904 20.5002 21.8534 20.309C22.0827 20.1423 22.2305 19.886 22.2599 19.6039C22.2936 19.2806 22.0655 18.8866 21.6093 18.0986L13.3844 3.89195C12.9299 3.10679 12.7026 2.71421 12.4061 2.58235C12.1474 2.46734 11.8521 2.46734 11.5935 2.58235C11.2969 2.71421 11.0696 3.10679 10.6151 3.89195Z"
+              stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h1 style="color: white; font-size: 1.5cm;">
+            <font color="red">Caution:</font> Vous vous apretez a tomber dans un trou noir. Ce site est
+            completement vide. Etes-vous sur de vouloir continuer ?
+          </h1>
+        </div>
+        <span style="float: right;">
+          <button class="button-index" id="oui">Oui</button>
+          <button class="button-index" id="non">Non</button>
+        </span>
+
+        <div class="gg">
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--disc"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--disc"></div>
         </div>
         <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
-        </div>
-        <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--4 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--9 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--disc" style="opacity: 1, "></div>
-        </div>
-        <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--4 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--9 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
+          <div class="symbol symbol--rect symbol--4 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--2 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--9 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--4 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--2 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--9 gradient-orange"></div>
         </div>
         <div class="gg"></div>
         <div class="gg">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1">
-          </div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--2 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--5 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--2 gradient-orange"></div>
         </div>
-        <div class="gg  gg-last">
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
-          <div class="gg-symbol gg-symbol--square" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--2" style="opacity: 1, "></div>
-          <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient"
-            style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%); opacity: 1, ">
-          </div>
+        <div class="gg last">
+          <div class="symbol symbol--rect symbol--2 gradient-orange"></div>
+          <div class="symbol symbol--square"></div>
+          <div class="symbol symbol--rect symbol--2"></div>
+          <div class="symbol symbol--rect symbol--3 gradient-orange"></div>
+          <div class="symbol symbol--rect symbol--2 gradient-orange"></div>
+          <div class="symbol symbol--square"></div>
+          <div class="symbol symbol--rect symbol--2"></div>
+          <div class="symbol symbol--rect symbol--3 gradient-orange"></div>
         </div>
       </div>
     </div>
     <!-- fin du title -->
-  </div>
+
   </div>
   <div class="phone">
     <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
   </div>
+  <script>
+    function show_popup(className) {
+      const popups = document.querySelectorAll('.' + className + "_content");
+      const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+      popups.forEach(popup => {
+        popup.style.left = '20vw';
+      });
+
+      backgrounds.forEach(background => {
+        background.style.display = 'block';
+      });
+    }
+
+    function hide_popup(className) {
+      const popups = document.querySelectorAll('.' + className + "_content");
+      const backgrounds = document.querySelectorAll('.' + className + "_background");
+
+      popups.forEach(popup => {
+        popup.style.left = '-100vw';
+      });
+
+      backgrounds.forEach(background => {
+        background.style.display = 'none';
+      });
+    }
+  </script>
+  <script>
+    const buttonOui = document.getElementById('oui');
+    const buttonNon = document.getElementById('non');
+
+    buttonOui.addEventListener('click', function () {
+      buttonOui.classList.add('active');
+      setTimeout(() => {
+        window.location.href = "./page/home.html"
+      }, 500); // 500 ms
+    });
+    buttonNon.addEventListener('click', function () {
+      buttonNon.classList.add('active');
+      setTimeout(() => {
+        show_popup('popup_troll');
+
+        setTimeout(() => {
+          window.location.href = "./page/home.html"
+        }, 1750); // 500 ms
+
+      }, 500); // 500 ms
+    });
+  </script>
 </body>
-
-<script>
-  function delayHref(event, element, delay) {
-    event.preventDefault(); // Empêche la navigation immédiate
-    const href = element.getAttribute('href'); // Récupère l'URL du lien
-
-    setTimeout(() => {
-      window.location.href = href; // Redirige après le délai
-    }, delay); // Délai en millisecondes
-  }
-</script>
 
 </html>

@@ -157,7 +157,7 @@
 }
 
 /* button index */
-.button-50 {
+.button-index {
   line-height: 78px;
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
@@ -178,11 +178,11 @@
   cursor: pointer;
 }
 
-.button-50:hover {
+.button-index:hover {
   animation: infinite_pulse 2s infinite linear;
 }
 
-.button-50.active {
+.button-index.active {
   animation: black_hole 0.5s ease-in-out forwards;
 }
 

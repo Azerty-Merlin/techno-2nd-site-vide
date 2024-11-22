@@ -27,13 +27,13 @@
     margin: 0;
     margin-left: 3cm;
     margin-top: 1cm;
-    color: transparent;
     font-size: 3cm;
     position: relative;
     letter-spacing: 1vw;
 }
 
 .Title#title {
+    color: transparent;
     background: url("../img/rainbow-nebula.jpg") repeat;
     background-position: 50% 10%;
     -webkit-background-clip: text;

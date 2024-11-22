@@ -1,9 +1,11 @@
+#light-theme,
 #light-theme .content,
 #light-theme p,
 #light-theme .color {
     color: black !important;
 }
 
+#dark-theme,
 #dark-theme .content,
 #dark-theme p,
 #dark-theme .color {
