@@ -20,6 +20,7 @@ Ainsi, pour tout concept conceptuel, il existe un concept non conceptualisé qui
 ### À Propos  
 
 Ce projet fait partie de la série **PhenixBleu**, un ensemble de projets explorant des idées abstraites et philosophiques à travers le code et le design. 
+
 PhenixBleu est un site ouvert et gratuit qui **permet d'héberger son site web** rapidement et simplement. 
 
 ---  
