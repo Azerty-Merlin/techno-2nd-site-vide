@@ -13,13 +13,14 @@ De plus, un concept conceptuel ne peut conceptualiser que des concepts conceptue
 
 Ainsi, pour tout concept conceptuel, il existe un concept non conceptualisé qui peut se conceptualiser via le théorème de la conceptualisation conceptuelle avancée.  
 
-💡 En résumé : le concept du site est **le vide** (alias **void**).  
+💡 En résumé : le concept du site est **le vide** (alias **Void**).  
 
 ---
 
 ### À Propos  
 
-Ce projet fait partie de la série **PhenixBleu**, un ensemble de projets explorant des idées abstraites et philosophiques à travers le code et le design.  
+Ce projet fait partie de la série **PhenixBleu**, un ensemble de projets explorant des idées abstraites et philosophiques à travers le code et le design. 
+PhenixBleu est un site ouvert et gratuit qui **permet d'héberger son site web** rapidement et simplement. 
 
 ---  
 
