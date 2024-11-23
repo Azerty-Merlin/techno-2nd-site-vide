@@ -7,14 +7,7 @@
   <link rel="icon" href="./img/black-hole.png">
   <meta name="viewport" content="initial-scale=1, width=device-width">
 
-  <link rel="stylesheet" href="./css/topbar.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/custom.css">
-  <link rel="stylesheet" href="./css/theme.css">
-  <link rel="stylesheet" href="./css/title.css">
-  <link rel="stylesheet" href="./css/popup.css">
-  <link rel="stylesheet" href="./css/bottombar.css">
-  <link rel="stylesheet" href="./css/button.css">
+  <link rel="stylesheet" href="./css/css.css">
 </head>
 
 <body id="dark-theme" class="color">
@@ -37,7 +30,9 @@
       </div>
       <h1 class="popup_title">Troll</h1>
       <center>
-        <h1>Désolé vous n'aviez pas le choix ah ah ah !</h1>
+        <h1 style="color: white; font-size: 1.5cm; margin-top: calc(40vh - 3cm);">
+          Désolé vous n'aviez pas le choix ah ah ah !
+        </h1>
       </center>
     </div>
     <!-- fin du troll popup -->
@@ -92,16 +87,20 @@
         </div>
 
         <div class="flex">
+          <!-- svg attention -->
           <svg xmlns="http://www.w3.org/2000/svg" width="10cm" height="10cm" viewBox="0 0 24 24" fill="red"
             style="overflow: hidden;">
             <path
               d="M11.9998 9.00023V13.0002M11.9998 17.0002H12.0098M10.6151 3.89195L2.39019 18.0986C1.93398 18.8866 1.70588 19.2806 1.73959 19.6039C1.769 19.886 1.91677 20.1423 2.14613 20.309C2.40908 20.5002 2.86435 20.5002 3.77487 20.5002H20.2246C21.1352 20.5002 21.5904 20.5002 21.8534 20.309C22.0827 20.1423 22.2305 19.886 22.2599 19.6039C22.2936 19.2806 22.0655 18.8866 21.6093 18.0986L13.3844 3.89195C12.9299 3.10679 12.7026 2.71421 12.4061 2.58235C12.1474 2.46734 11.8521 2.46734 11.5935 2.58235C11.2969 2.71421 11.0696 3.10679 10.6151 3.89195Z"
               stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
+          <!-- fin du svg -->
+          <!-- text -->
           <h1 style="color: white; font-size: 1.5cm;">
             <font color="red">Caution:</font> Vous vous apretez a tomber dans un trou noir. Ce site est
             completement vide. Etes-vous sur de vouloir continuer ?
           </h1>
+          <!--fin du texte -->
         </div>
         <span style="float: right;">
           <button class="button-index" id="oui">Oui</button>
@@ -144,36 +143,7 @@
     <!-- fin du title -->
 
   </div>
-  <div class="phone">
-    <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
-  </div>
-  <script>
-    function show_popup(className) {
-      const popups = document.querySelectorAll('.' + className + "_content");
-      const backgrounds = document.querySelectorAll('.' + className + "_background");
 
-      popups.forEach(popup => {
-        popup.style.left = '20vw';
-      });
-
-      backgrounds.forEach(background => {
-        background.style.display = 'block';
-      });
-    }
-
-    function hide_popup(className) {
-      const popups = document.querySelectorAll('.' + className + "_content");
-      const backgrounds = document.querySelectorAll('.' + className + "_background");
-
-      popups.forEach(popup => {
-        popup.style.left = '-100vw';
-      });
-
-      backgrounds.forEach(background => {
-        background.style.display = 'none';
-      });
-    }
-  </script>
   <script>
     const buttonOui = document.getElementById('oui');
     const buttonNon = document.getElementById('non');
@@ -195,6 +165,15 @@
 
       }, 500); // 500 ms
     });
+  </script>
+
+  <script src="./js/popup.js"></script>
+  <script src="./js/phone.js"></script>
+
+  <script>
+    window.onload = (
+      add_phone()
+    );
   </script>
 </body>
 

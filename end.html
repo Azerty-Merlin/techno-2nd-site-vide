@@ -3,18 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Void</title>
+  <title>The Void, Fin</title>
   <link rel="icon" href="./img/black-hole.png">
   <meta name="viewport" content="initial-scale=1, width=device-width">
 
-  <link rel="stylesheet" href="./css/topbar.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/custom.css">
-  <link rel="stylesheet" href="./css/theme.css">
-  <link rel="stylesheet" href="./css/title.css">
-  <link rel="stylesheet" href="./css/popup.css">
-  <link rel="stylesheet" href="./css/bottombar.css">
-  <link rel="stylesheet" href="./css/button.css">
+  <link rel="stylesheet" href="./css/css.css">
 </head>
 
 <body id="dark-theme" class="color">
@@ -70,10 +63,9 @@
 
         <h1 class="Title">Salut et à bientôt !</h1>
 
-        <div style="height: calc(100vh - 17.5cm);"></div>
+        <!-- <div style="height: calc(100vh - 17.5cm);"></div> -->
 
-        <a href="./index.html"></a>
-        <button class="button-index" id="acceuille">
+        <button class="button-index" id="acceuille" style="margin-top: 2cm;">
           Acceuille
         </button>
 
@@ -114,9 +106,6 @@
     <!-- fin du title -->
 
   </div>
-  <div class="phone">
-    <h1>Veuillez regarder mon site sur un ecran plus grand</h1>
-  </div>
 
   <script>
     const button = document.getElementById('acceuille');
@@ -127,6 +116,14 @@
         window.location.href = "./index.html"
       }, 500); // 500 ms
     });
+  </script>
+
+  <script src="./js/phone.js"></script>
+
+  <script>
+    window.onload = (
+      add_phone()
+    );
   </script>
 </body>
 
