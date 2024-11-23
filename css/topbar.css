@@ -63,7 +63,7 @@
     padding-left: 2.5cm;
 }
 
-.content {
+#content {
     position: fixed;
     padding-bottom: 2cm;
     min-height: calc(100vh - 2cm - 2px);
