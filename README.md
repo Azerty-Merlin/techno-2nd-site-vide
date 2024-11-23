@@ -1,5 +1,5 @@
 # Void  
-<img src="./img/black-hole.png" alt="Logo Void" width="150">
+<p align="center"><img src="./img/black-hole.png" alt="Logo Void"></p>
 
 **Void** est un site web créé par **Merlin111** dans le cadre d’un devoir de technologie.  
 Ce site est développé avec les technologies suivantes : **HTML5**, **CSS3**, **JavaScript**, **React**, et **MUI**.
