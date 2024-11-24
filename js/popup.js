@@ -98,7 +98,7 @@ function add_popup_chose() {
             </div>
             <h1 class="popup_title">Quelque chose.</h1>
             <a href="./main_quelque_chose.html" class="button-dark">
-                Voir quelque Chose ?
+                Voir quelque chose ?
             </a>
         </div>
     <!-- fin du quelque chose -->

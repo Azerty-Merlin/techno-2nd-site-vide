@@ -10,11 +10,19 @@
   <link rel="stylesheet" href="../css/css.css">
 </head>
 
+<!--loader-->
+<div class="loader-container">
+  <img src="../img/black-hole.png" class='img-loader' alt="Loading..." />
+  <br />
+  <div class="spinner"></div>
+</div>
+<!-- fin du loader -->
+
 <body id="dark-theme" class="color">
   <div id="main" class="desktop">
 
     <div class='background'></div>
-        <div id="content">
+    <div id="content">
 
       <!-- title -->
       <div class="Section">
@@ -48,7 +56,7 @@
           </div>
 
           <h1 class="Title" id="title">The Void</h1>
-          <h2 class="Subtitle">Contempler ce vide.</h2>
+          <h2 class="Subtitle">Contemplez ce vide.</h2>
 
           <div class="gg">
             <div class="symbol symbol--rect symbol--5 gradient-blue"></div>
@@ -84,7 +92,7 @@
           </h3>
           <ul>
             <li>
-              <a class="link-item" href="#" target="_blank" onclick="show_popup('popup_vide')">
+              <a class="link-item" href="#" onclick="show_popup('popup_vide')">
                 <div class="link-item-content">
                   <span class="link-item-title color">Du vide ?</span>
                   <span class="link-item-dot"></span>
@@ -94,7 +102,7 @@
               </a>
             </li>
             <li>
-              <a class="link-item" href="mailto:rgpd@rien-du-tout.com" target="_blank">
+              <a class="link-item" href="#" onclick="show_popup('popup_chose')">
                 <div class="link-item-content">
                   <span class="link-item-title color">Quelque chose ?</span>
                   <span class="link-item-dot"></span>
@@ -131,6 +139,14 @@
 
       // Apply new positions to the title
       title.style.backgroundPosition = `${traX}% ${traY}%`;
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loader = document.querySelector(".loader-container");
+      setTimeout(() => {
+        loader.style.display = "none"; // Masquer le loader après 2s
+      }, 2000);
     });
   </script>
 

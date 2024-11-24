@@ -1,6 +1,8 @@
-// Fonction pour appliquer le thème basé sur le localStorage
+const storage = sessionStorage;
+
+// Fonction pour appliquer le thème basé sur le storage
 function applyTheme() {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = storage.getItem('theme');
     const themeIcon = document.getElementById('toggle_theme_icon');
 
     if (savedTheme === 'dark-theme') {
@@ -16,15 +18,15 @@ function applyTheme() {
 
 // Fonction pour basculer entre les thèmes
 function toggle_theme() {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = storage.getItem('theme');
 
     if (savedTheme === 'dark-theme') {
-        localStorage.setItem('theme', 'light-theme');
+        storage.setItem('theme', 'light-theme');
 
     } else if (savedTheme === "light-theme") {
-        localStorage.setItem('theme', 'dark-theme');
+        storage.setItem('theme', 'dark-theme');
     } else {
-        localStorage.setItem('theme', 'light-theme');
+        storage.setItem('theme', 'light-theme');
     }
     applyTheme();
 }
