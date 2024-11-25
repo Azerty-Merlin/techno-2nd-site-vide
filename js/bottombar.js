@@ -18,6 +18,7 @@ function add_bottombar() {
             <a href="./contact.html">Contact et liens</a>
             <a href="./apropos.html">A props</a>
             <a href="./concept.html">Concept</a>
+            <a href="./pages.html">Pages</a>
             <a href="../end.html">Finir la visite ?</a>
         </div>
     `;
