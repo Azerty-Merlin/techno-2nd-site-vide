@@ -29,4 +29,4 @@ PhenixBleu est un site ouvert et gratuit qui **permet d'héberger son site web**
 Il faut juste Cloner et double cliquer sur l'index.html
 
 ### Problème
-Si il y a un problème avec les chemins de pages et seulement si il y a un problème (normalement non) veuillez naviguer avec **./page/pages.disabled.html**
+Si il y a un problème avec les chemins de pages et seulement si il y a un problème (normalement non) veuillez naviguer avec **./page/pages.html**
