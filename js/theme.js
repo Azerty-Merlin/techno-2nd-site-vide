@@ -1,5 +1,9 @@
 const storage = sessionStorage;
 
+function getTheme() {
+    return storage.getItem('theme');
+}
+
 // Fonction pour appliquer le thème basé sur le storage
 function applyTheme() {
     const savedTheme = storage.getItem('theme');

@@ -80,6 +80,16 @@
     </div>
 
     <script>
+        function info() {
+            document.getElementById('p1').innerHTML =
+                'Langue du navigateur : ' + navigator.language +
+                '<br>Theme : ' + getTheme() +
+                '<br>Cookies autorisés : ' + navigator.cookieEnabled +
+                '<br>Plateforme utilisée : ' + navigator.platform +
+                '<br>Ram : ' + navigator.deviceMemory +
+                "<br>En ligne: " + (navigator.onLine ? "Oui" : "Non");
+        }
+        
         function coordonnees(pos) {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
@@ -131,7 +141,8 @@
             add_phone(),
             add_scroll_button(),
             add_bottombar(),
-            coordonnees()
+            coordonnees(),
+            info()
         );
     </script>
 </body>
