@@ -176,6 +176,7 @@
   padding-right: 2cm;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  /* animation: vertical-shaking 0.3s infinite ease-in-out; */
 }
 
 .button-index:hover {
@@ -219,6 +220,14 @@
     transform: scale(1.4) rotate(360deg);
   }
 }
+
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(15px) }
+  50% { transform: translateY(-15px) }
+  75% { transform: translateY(15px) }
+  100% { transform: translateY(0) }
+ }
 
 :root {
   --rad: .7rem;
