@@ -13,7 +13,7 @@ function add_topbar(option) {
     }
 
     // Créer un nouvel élément
-    const newElement = document.createElement('div');
+    const newElement = document.createElement('header');
     newElement.className = 'topbar';
 
     // Générer le contenu dynamique de la barre

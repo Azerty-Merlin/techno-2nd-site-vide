@@ -2,7 +2,7 @@ function add_bottombar() {
     const ajuster = document.createElement('div');
     ajuster.style = "flex-grow: 1"
 
-    const element = document.createElement('div');
+    const element = document.createElement('footer');
     element.className = "bottombar"
     element.innerHTML = `
         <h3>© Copyright: 2024 Void.</h3>
@@ -11,7 +11,7 @@ function add_bottombar() {
             rien à grignoter. Mais bon, si vous trouvez quelque chose d’intéressant, faites comme chez vous.
             Juste, n’oubliez pas de fermer la porte en sortant.
         </span>
-        <div class="link">
+        <nav class="link">
             <a href="./politique.html">Politique de confidentialité</a>
             <a href="./rgpd.html">RGPD</a>
             <a href="./Cookies.html">Cookie</a>
@@ -20,7 +20,7 @@ function add_bottombar() {
             <a href="./concept.html">Concept</a>
             <a href="./pages.html">Pages</a>
             <a href="../end.html">Finir la visite ?</a>
-        </div>
+        </nav>
     `;
 
     (document.getElementById('content')).appendChild(ajuster); //pour que la bottombar soit en bas
