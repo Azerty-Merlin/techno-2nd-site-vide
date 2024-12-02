@@ -296,7 +296,9 @@
             toggleActive(activeStep);
             toggleActive(step);
 
-            scrollToTop();
+            setTimeout(() => {
+                scrollToTop();
+            }, 50);
         }
 
     </script>
